@@ -37,7 +37,7 @@ const CTA = () => {
               </div>
               <div>
                 <div className="text-sm text-muted-foreground">Location</div>
-                <div className="font-medium">Kallang Stadium, Singapore</div>
+                <div className="font-medium">Singapore</div>
               </div>
             </div>
             <div className="flex items-center gap-4">
@@ -55,7 +55,7 @@ const CTA = () => {
               </div>
               <div>
                 <div className="text-sm text-muted-foreground">Phone</div>
-                <div className="font-medium">+65 8123 4567</div>
+                <div className="font-medium">+65 98208703</div>
               </div>
             </div>
           </div>
