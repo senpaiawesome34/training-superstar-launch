@@ -46,7 +46,7 @@ const CTA = () => {
               </div>
               <div>
                 <div className="text-sm text-muted-foreground">Email</div>
-                <div className="font-medium">hello@trainingsuperstar.sg</div>
+                <div className="font-medium">trainingsuperstaracademy@gmail.com</div>
               </div>
             </div>
             <div className="flex items-center gap-4">
