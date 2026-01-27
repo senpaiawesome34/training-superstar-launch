@@ -30,7 +30,7 @@ const CTA = () => {
           </div>
 
           {/* Contact Info */}
-          <div className="grid sm:grid-cols-3 gap-8 pt-12 border-t border-border">
+          <div className="grid sm:grid-cols-3 gap-12 pt-12 border-t border-border">
             <div className="flex items-center gap-4">
               <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
                 <MapPin className="w-6 h-6 text-primary" />
@@ -46,7 +46,7 @@ const CTA = () => {
               </div>
               <div>
                 <div className="text-sm text-muted-foreground">Email</div>
-                <div className="font-medium">trainingsuperstaracademy@gmail.com</div>
+                <div className="font-medium break-all text-sm sm:text-base">trainingsuperstaracademy@gmail.com</div>
               </div>
             </div>
             <div className="flex items-center gap-4">
