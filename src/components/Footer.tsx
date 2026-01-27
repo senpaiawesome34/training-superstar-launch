@@ -1,4 +1,4 @@
-import { Instagram, Facebook, Youtube } from "lucide-react";
+import { Instagram, Facebook, Youtube, Send } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -40,6 +40,14 @@ const Footer = () => {
               className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center hover:bg-primary/20 transition-colors"
             >
               <Youtube className="w-5 h-5 text-muted-foreground" />
+            </a>
+            <a
+              href="https://t.me/TrainingSuperstarAcademy"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center hover:bg-primary/20 transition-colors"
+            >
+              <Send className="w-5 h-5 text-muted-foreground" />
             </a>
           </div>
         </div>
