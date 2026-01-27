@@ -24,7 +24,9 @@ const Footer = () => {
           {/* Social */}
           <div className="flex items-center gap-4">
             <a
-              href="#"
+              href="https://www.instagram.com/trainingsuperstar.academy?igsh=MTFxaXV2cWlsbWw3bQ%3D%3D&utm_source=qr"
+              target="_blank"
+              rel="noopener noreferrer"
               className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center hover:bg-primary/20 transition-colors"
             >
               <Instagram className="w-5 h-5 text-muted-foreground" />
