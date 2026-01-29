@@ -55,24 +55,24 @@ const Hero = () => {
           {/* Stats */}
           <div className="grid grid-cols-3 gap-6 max-w-lg animate-fade-in animation-delay-600">
             <div className="text-center">
-              <div className="flex items-center justify-center w-12 h-12 mx-auto mb-2 rounded-lg bg-primary/10">
-                <Timer className="w-6 h-6 text-primary" />
+              <div className="flex items-center justify-center w-16 h-16 mx-auto mb-2 rounded-lg bg-primary/10 overflow-hidden">
+                <img src={worldAthleticsLogo} alt="World Athletics" className="w-12 h-12 object-contain" />
               </div>
-              <div className="text-2xl font-display font-bold text-foreground">500+</div>
-              <div className="text-xs text-muted-foreground">Athletes Trained</div>
+              <div className="text-xl font-display font-bold text-foreground">World Athletics</div>
+              <div className="text-xs text-muted-foreground">Recognised</div>
             </div>
             <div className="text-center">
-              <div className="flex items-center justify-center w-12 h-12 mx-auto mb-2 rounded-lg bg-primary/10">
-                <Target className="w-6 h-6 text-primary" />
+              <div className="flex items-center justify-center w-16 h-16 mx-auto mb-2 rounded-lg bg-white overflow-hidden">
+                <img src={sportsgLogo} alt="Sport Singapore" className="w-12 h-12 object-contain" />
               </div>
-              <div className="text-2xl font-display font-bold text-foreground">95%</div>
-              <div className="text-xs text-muted-foreground">Pass Rate</div>
+              <div className="text-xl font-display font-bold text-foreground">SportSG</div>
+              <div className="text-xs text-muted-foreground">Certified</div>
             </div>
             <div className="text-center">
-              <div className="flex items-center justify-center w-12 h-12 mx-auto mb-2 rounded-lg bg-primary/10">
-                <Trophy className="w-6 h-6 text-primary" />
+              <div className="flex items-center justify-center w-16 h-16 mx-auto mb-2 rounded-lg bg-primary/10">
+                <Trophy className="w-8 h-8 text-primary" />
               </div>
-              <div className="text-2xl font-display font-bold text-foreground">Gold</div>
+              <div className="text-xl font-display font-bold text-foreground">Gold</div>
               <div className="text-xs text-muted-foreground">Standard</div>
             </div>
           </div>
