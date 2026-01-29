@@ -2,9 +2,9 @@ import { Star, Quote } from "lucide-react";
 
 const testimonials = [
   {
-    name: "Marcus Tan",
-    role: "NSman, 32",
-    content: "Failed my IPPT twice before joining TSA. After 10 weeks, I scored a Silver! The coaches really know how to break things down for non-athletes like me.",
+    name: "Chu Shun Yuan",
+    role: "NSman, 23",
+    content: "I went from doubting myself to running a sub-10 minute 2.4km with only 3 weeks of proper training. TSA knew exactly how to push me while keeping training realistic and effective. Couldn't have done this without their guidance.",
     rating: 5,
   },
   {

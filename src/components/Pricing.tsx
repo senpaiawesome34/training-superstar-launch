@@ -135,16 +135,16 @@ const Pricing = () => {
                 </h3>
                 <p className="text-muted-foreground mb-6">
                   Comprehensive training programs designed for schools looking to elevate their track & field teams. 
-                  Custom packages available for primary, secondary, and JC levels.
+                  Custom packages available for primary, secondary, pre-tertiary & tertiary levels.
                 </p>
                 <ul className="grid sm:grid-cols-2 gap-3">
                   {[
-                    "Team training sessions",
-                    "Competition preparation",
-                    "Coach development workshops",
-                    "Performance analytics",
-                    "Equipment recommendations",
-                    "Event-day support",
+                    "Team Training Sessions",
+                    "Competition Preparation",
+                    "Mental Conditioning",
+                    "Performance Analysis",
+                    "Technical Expertise",
+                    "Event-Day Support",
                   ].map((feature) => (
                     <li key={feature} className="flex items-center gap-3 text-sm">
                       <Check className="w-5 h-5 text-primary shrink-0" />
@@ -155,7 +155,6 @@ const Pricing = () => {
               </div>
               <div className="flex flex-col items-center md:items-end gap-4">
                 <div className="text-center md:text-right">
-                  <span className="text-muted-foreground text-sm">Starting from</span>
                   <div className="text-3xl font-display font-bold text-gradient">Custom Pricing</div>
                 </div>
                 <Button variant="hero" size="lg">
