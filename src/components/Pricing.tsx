@@ -135,15 +135,15 @@ const Pricing = () => {
                 </h3>
                 <p className="text-muted-foreground mb-6">
                   Comprehensive training programs designed for schools looking to elevate their track & field teams. 
-                  Custom packages available for primary, secondary, and JC levels.
+                  Custom packages available for primary, secondary, pre-tertiary & tertiary levels.
                 </p>
                 <ul className="grid sm:grid-cols-2 gap-3">
                   {[
                     "Team training sessions",
                     "Competition preparation",
-                    "Coach development workshops",
-                    "Performance analytics",
-                    "Equipment recommendations",
+                    "Mental conditioning",
+                    "Performance analysis",
+                    "Technical expertise",
                     "Event-day support",
                   ].map((feature) => (
                     <li key={feature} className="flex items-center gap-3 text-sm">
