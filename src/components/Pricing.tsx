@@ -117,6 +117,11 @@ const Pricing = () => {
           ))}
         </div>
 
+        {/* Footer Note */}
+        <p className="text-center text-muted-foreground text-sm mt-12">
+          All plans are month-to-month. No long-term contracts. Cancel anytime.
+        </p>
+
         {/* School Championship Package */}
         <div className="mt-16 max-w-4xl mx-auto">
           <div className="bg-gradient-card rounded-2xl p-8 md:p-12 border border-border hover:border-primary/50 transition-all duration-500">
@@ -161,11 +166,6 @@ const Pricing = () => {
             </div>
           </div>
         </div>
-
-        {/* Footer Note */}
-        <p className="text-center text-muted-foreground text-sm mt-12">
-          All plans are month-to-month. No long-term contracts. Cancel anytime.
-        </p>
       </div>
     </section>
   );
