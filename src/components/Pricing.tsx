@@ -117,6 +117,51 @@ const Pricing = () => {
           ))}
         </div>
 
+        {/* School Championship Package */}
+        <div className="mt-16 max-w-4xl mx-auto">
+          <div className="bg-gradient-card rounded-2xl p-8 md:p-12 border border-border hover:border-primary/50 transition-all duration-500">
+            <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8">
+              <div className="flex-1">
+                <span className="text-primary font-semibold text-sm uppercase tracking-wider">
+                  For Schools
+                </span>
+                <h3 className="text-2xl md:text-3xl font-display font-bold mt-2 mb-4">
+                  School Championship Package
+                </h3>
+                <p className="text-muted-foreground mb-6">
+                  Comprehensive training programs designed for schools looking to elevate their track & field teams. 
+                  Custom packages available for primary, secondary, and JC levels.
+                </p>
+                <ul className="grid sm:grid-cols-2 gap-3">
+                  {[
+                    "Team training sessions",
+                    "Competition preparation",
+                    "Coach development workshops",
+                    "Performance analytics",
+                    "Equipment recommendations",
+                    "Event-day support",
+                  ].map((feature) => (
+                    <li key={feature} className="flex items-center gap-3 text-sm">
+                      <Check className="w-5 h-5 text-primary shrink-0" />
+                      <span className="text-foreground/80">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="flex flex-col items-center md:items-end gap-4">
+                <div className="text-center md:text-right">
+                  <span className="text-muted-foreground text-sm">Starting from</span>
+                  <div className="text-3xl font-display font-bold text-gradient">Custom Pricing</div>
+                </div>
+                <Button variant="hero" size="lg">
+                  Contact Us
+                  <ChevronRight className="w-4 h-4" />
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Footer Note */}
         <p className="text-center text-muted-foreground text-sm mt-12">
           All plans are month-to-month. No long-term contracts. Cancel anytime.
