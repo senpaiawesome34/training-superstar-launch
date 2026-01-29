@@ -1,6 +1,8 @@
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-runner.jpg";
-import { ArrowRight, Timer, Target, Trophy } from "lucide-react";
+import worldAthleticsLogo from "@/assets/world-athletics-logo.png";
+import sportsgLogo from "@/assets/sportsg-logo.webp";
+import { ArrowRight, Trophy } from "lucide-react";
 
 const Hero = () => {
   return (
