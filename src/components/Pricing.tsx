@@ -137,8 +137,7 @@ const Pricing = () => {
                   School Championship Package
                 </h3>
                 <p className="text-muted-foreground mb-6">
-                  Comprehensive training programs designed for schools looking to elevate their track & field and/or cross country teams. 
-                  Custom packages available for primary, secondary, pre-tertiary & tertiary levels.
+                  Comprehensive training programs designed for schools looking to elevate their track & field and/or cross country teams. Custom packages available for primary, secondary, pre-tertiary & tertiary levels.
                 </p>
                 <ul className="grid sm:grid-cols-2 gap-3">
                   {[
