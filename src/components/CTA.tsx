@@ -19,9 +19,11 @@ const CTA = () => {
               Take the first step towards crushing your fitness goals. Book a free consultation and let's create your personalized training plan.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button variant="hero" size="xl">
-                Book Free Consultation
-                <ArrowRight className="ml-2" />
+              <Button variant="hero" size="xl" asChild>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfpVLmzpJfZQVJ0yaW0zOYu01MJqyUchaY1VPyPqJObnhGx3Q/viewform" target="_blank" rel="noopener noreferrer">
+                  Sign Up Now
+                  <ArrowRight className="ml-2" />
+                </a>
               </Button>
               <Button variant="heroOutline" size="xl">
                 View Schedule
