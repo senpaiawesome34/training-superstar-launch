@@ -43,12 +43,16 @@ const Hero = () => {
 
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row gap-4 mb-12 animate-slide-up animation-delay-600">
-            <Button variant="hero" size="xl">
-              Start Your Journey
-              <ArrowRight className="ml-2" />
+            <Button variant="hero" size="xl" asChild>
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSfpVLmzpJfZQVJ0yaW0zOYu01MJqyUchaY1VPyPqJObnhGx3Q/viewform" target="_blank" rel="noopener noreferrer">
+                Start Your Journey
+                <ArrowRight className="ml-2" />
+              </a>
             </Button>
-            <Button variant="heroOutline" size="xl">
-              View Programs
+            <Button variant="heroOutline" size="xl" asChild>
+              <a href="#programs">
+                View Programs
+              </a>
             </Button>
           </div>
 

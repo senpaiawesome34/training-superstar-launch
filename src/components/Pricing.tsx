@@ -109,9 +109,12 @@ const Pricing = () => {
               <Button
                 variant={tier.popular ? "hero" : "heroOutline"}
                 className="w-full"
+                asChild
               >
-                Get Started
-                <ChevronRight className="w-4 h-4" />
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfpVLmzpJfZQVJ0yaW0zOYu01MJqyUchaY1VPyPqJObnhGx3Q/viewform" target="_blank" rel="noopener noreferrer">
+                  Get Started
+                  <ChevronRight className="w-4 h-4" />
+                </a>
               </Button>
             </div>
           ))}
