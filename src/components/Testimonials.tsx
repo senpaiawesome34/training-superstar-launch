@@ -8,9 +8,9 @@ const testimonials = [
     rating: 5,
   },
   {
-    name: "Sarah Lim",
-    role: "Finance Executive, 28",
-    content: "I was a complete beginner who couldn't run 1km without stopping. Now I'm doing 5K runs every weekend. TSA changed my relationship with fitness.",
+    name: "Marc Menon",
+    role: "Pre-Enlistee, 19",
+    content: "Massive shoutout to TSA for bringing my 2.4km run from 14+ mins to 11.5 mins over the course of a month! Couldn't have done it without their structured training programs and persistent motivation. Money very well spent!",
     rating: 5,
   },
   {
