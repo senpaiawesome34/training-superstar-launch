@@ -1,7 +1,10 @@
 import { Button } from "@/components/ui/button";
-import { Check, ChevronRight } from "lucide-react";
-
-const tiers = [
+import { Check, ChevronRight, Loader2 } from "lucide-react";
+import { useState } from "react";
+import { supabase } from "@/integrations/supabase/client";
+import { STRIPE_PRICES, TierKey } from "@/lib/stripe";
+import { useToast } from "@/hooks/use-toast";
+const tiers: { name: string; price: number; description: string; features: string[]; popular: boolean; tierKey: TierKey }[] = [
   {
     name: "Hobbyjogger",
     price: 49,
@@ -13,6 +16,7 @@ const tiers = [
       "Community WhatsApp group",
     ],
     popular: false,
+    tierKey: "hobbyjogger",
   },
   {
     name: "Advanced Hobbyjogger",
@@ -27,6 +31,7 @@ const tiers = [
       "Priority booking for sessions",
     ],
     popular: true,
+    tierKey: "advancedHobbyjogger",
   },
   {
     name: "Going for Gold",
@@ -42,10 +47,39 @@ const tiers = [
       "Competition prep support",
     ],
     popular: false,
+    tierKey: "goingForGold",
   },
 ];
 
 const Pricing = () => {
+  const [loadingTier, setLoadingTier] = useState<TierKey | null>(null);
+  const { toast } = useToast();
+
+  const handleSubscribe = async (tierKey: TierKey) => {
+    setLoadingTier(tierKey);
+    try {
+      const priceId = STRIPE_PRICES[tierKey].priceId;
+      
+      const { data, error } = await supabase.functions.invoke("create-checkout", {
+        body: { priceId },
+      });
+
+      if (error) throw error;
+      if (data?.url) {
+        window.open(data.url, "_blank");
+      }
+    } catch (error) {
+      console.error("Checkout error:", error);
+      toast({
+        title: "Error",
+        description: "Unable to start checkout. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setLoadingTier(null);
+    }
+  };
+
   return (
     <section id="pricing" className="py-24 bg-background">
       <div className="container mx-auto px-4">
@@ -109,12 +143,20 @@ const Pricing = () => {
               <Button
                 variant={tier.popular ? "hero" : "heroOutline"}
                 className="w-full"
-                asChild
+                onClick={() => handleSubscribe(tier.tierKey)}
+                disabled={loadingTier !== null}
               >
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfpVLmzpJfZQVJ0yaW0zOYu01MJqyUchaY1VPyPqJObnhGx3Q/viewform" target="_blank" rel="noopener noreferrer">
-                  Get Started
-                  <ChevronRight className="w-4 h-4" />
-                </a>
+                {loadingTier === tier.tierKey ? (
+                  <>
+                    <Loader2 className="w-4 h-4 animate-spin" />
+                    Loading...
+                  </>
+                ) : (
+                  <>
+                    Get Started
+                    <ChevronRight className="w-4 h-4" />
+                  </>
+                )}
               </Button>
             </div>
           ))}
