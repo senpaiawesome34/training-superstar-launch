@@ -143,12 +143,20 @@ const Pricing = () => {
               <Button
                 variant={tier.popular ? "hero" : "heroOutline"}
                 className="w-full"
-                asChild
+                onClick={() => handleSubscribe(tier.tierKey)}
+                disabled={loadingTier !== null}
               >
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfpVLmzpJfZQVJ0yaW0zOYu01MJqyUchaY1VPyPqJObnhGx3Q/viewform" target="_blank" rel="noopener noreferrer">
-                  Get Started
-                  <ChevronRight className="w-4 h-4" />
-                </a>
+                {loadingTier === tier.tierKey ? (
+                  <>
+                    <Loader2 className="w-4 h-4 animate-spin" />
+                    Loading...
+                  </>
+                ) : (
+                  <>
+                    Get Started
+                    <ChevronRight className="w-4 h-4" />
+                  </>
+                )}
               </Button>
             </div>
           ))}
