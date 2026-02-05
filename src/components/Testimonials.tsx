@@ -10,13 +10,13 @@ const testimonials = [
   {
     name: "Marc Menon",
     role: "Pre-Enlistee, 19",
-    content: "Massive shoutout to TSA for bringing my 2.4km run from 14+ mins to 11.5 mins over the course of a month! Couldn't have done it without their structured training programs and persistent motivation. Money very well spent!",
+    content: "Massive shout out to TSA for bringing my 2.4km run from 14+ mins to 11.5 mins over the course of a month, and it helped me pass my pre-enlistee IPPT for the first time! Could not have done it without their structured training programs and persistent motivation. Money very well spent!",
     rating: 5,
   },
   {
-    name: "Jonathan Ng",
-    role: "Software Engineer, 35",
-    content: "The group training sessions are amazing. Great vibes, supportive community, and coaches who actually care. Highly recommend for desk-bound folks!",
+    name: "Jared Goh",
+    role: "Undergraduate, 21",
+    content: "TSA has been instrumental in guiding me throughout my weight loss and fitness journey. After being largely sedentary for my 2 years in NS, working with TSA has kickstarted a much healthier and active lifestyle. I am now a confident runner with an athletic physique!",
     rating: 5,
   },
 ];
