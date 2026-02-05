@@ -52,6 +52,34 @@ const tiers: { name: string; price: number; description: string; features: strin
 ];
 
 const Pricing = () => {
+  const [loadingTier, setLoadingTier] = useState<TierKey | null>(null);
+  const { toast } = useToast();
+
+  const handleSubscribe = async (tierKey: TierKey) => {
+    setLoadingTier(tierKey);
+    try {
+      const priceId = STRIPE_PRICES[tierKey].priceId;
+      
+      const { data, error } = await supabase.functions.invoke("create-checkout", {
+        body: { priceId },
+      });
+
+      if (error) throw error;
+      if (data?.url) {
+        window.open(data.url, "_blank");
+      }
+    } catch (error) {
+      console.error("Checkout error:", error);
+      toast({
+        title: "Error",
+        description: "Unable to start checkout. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setLoadingTier(null);
+    }
+  };
+
   return (
     <section id="pricing" className="py-24 bg-background">
       <div className="container mx-auto px-4">
