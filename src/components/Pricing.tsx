@@ -4,7 +4,7 @@ import { useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { STRIPE_PRICES, TierKey } from "@/lib/stripe";
 import { useToast } from "@/hooks/use-toast";
-const tiers = [
+const tiers: { name: string; price: number; description: string; features: string[]; popular: boolean; tierKey: TierKey }[] = [
   {
     name: "Hobbyjogger",
     price: 49,
@@ -16,6 +16,7 @@ const tiers = [
       "Community WhatsApp group",
     ],
     popular: false,
+    tierKey: "hobbyjogger",
   },
   {
     name: "Advanced Hobbyjogger",
@@ -30,6 +31,7 @@ const tiers = [
       "Priority booking for sessions",
     ],
     popular: true,
+    tierKey: "advancedHobbyjogger",
   },
   {
     name: "Going for Gold",
@@ -45,6 +47,7 @@ const tiers = [
       "Competition prep support",
     ],
     popular: false,
+    tierKey: "goingForGold",
   },
 ];
 
