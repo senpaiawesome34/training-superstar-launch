@@ -53,8 +53,6 @@ serve(async (req) => {
       mode: "subscription",
       success_url: `${origin}/?success=true`,
       cancel_url: `${origin}/?canceled=true`,
-      // Allow customer to enter email if not provided
-      customer_creation: customerId ? undefined : "always",
     });
 
     logStep("Checkout session created", { sessionId: session.id, url: session.url });
