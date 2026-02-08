@@ -44,13 +44,13 @@ const Hero = () => {
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row gap-4 mb-12 animate-slide-up animation-delay-600">
             <Button variant="hero" size="xl" asChild>
-              <a href="https://docs.google.com/forms/d/e/1FAIpQLSfpVLmzpJfZQVJ0yaW0zOYu01MJqyUchaY1VPyPqJObnhGx3Q/viewform" target="_blank" rel="noopener noreferrer">
+              <a href="#programs">
                 Start Your Journey
                 <ArrowRight className="ml-2" />
               </a>
             </Button>
             <Button variant="heroOutline" size="xl" asChild>
-              <a href="#programs">
+              <a href="#pricing">
                 View Programs
               </a>
             </Button>
@@ -60,7 +60,7 @@ const Hero = () => {
           <div className="grid grid-cols-3 gap-6 max-w-lg animate-fade-in animation-delay-600">
             <div className="text-center">
               <div className="flex items-center justify-center w-16 h-16 mx-auto mb-2 rounded-lg bg-primary/10 overflow-hidden">
-                <img src={worldAthleticsLogo} alt="World Athletics" className="w-12 h-12 object-contain" />
+                <img src={worldAthleticsLogo} alt="World Athletics" className="w-20 h-20 object-cover scale-150" />
               </div>
               <div className="text-xl font-display font-bold text-foreground">World Athletics</div>
               <div className="text-xs text-muted-foreground">Recognised</div>

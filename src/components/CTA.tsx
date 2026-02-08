@@ -20,7 +20,7 @@ const CTA = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="hero" size="xl" asChild>
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfpVLmzpJfZQVJ0yaW0zOYu01MJqyUchaY1VPyPqJObnhGx3Q/viewform" target="_blank" rel="noopener noreferrer">
+                <a href="#pricing">
                   Sign Up Now
                   <ArrowRight className="ml-2" />
                 </a>
