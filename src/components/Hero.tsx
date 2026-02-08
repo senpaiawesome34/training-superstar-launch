@@ -60,7 +60,7 @@ const Hero = () => {
           <div className="grid grid-cols-3 gap-6 max-w-lg animate-fade-in animation-delay-600">
             <div className="text-center">
               <div className="flex items-center justify-center w-16 h-16 mx-auto mb-2 rounded-lg bg-primary/10 overflow-hidden">
-                <img src={worldAthleticsLogo} alt="World Athletics" className="w-12 h-12 object-contain" />
+                <img src={worldAthleticsLogo} alt="World Athletics" className="w-20 h-20 object-cover scale-150" />
               </div>
               <div className="text-xl font-display font-bold text-foreground">World Athletics</div>
               <div className="text-xs text-muted-foreground">Recognised</div>
