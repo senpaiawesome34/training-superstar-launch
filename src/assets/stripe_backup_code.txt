@@ -1,5 +1,0 @@
-Always verify you are on dashboard.stripe.com before entering this code and never share it with anyone (including Stripe Support or Stripe employees).
-
-Your code is: wwkm-cfgk-fkge-xjdr-evdp
-
-stripe secret key: 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
