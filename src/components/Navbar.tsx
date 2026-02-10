@@ -63,8 +63,8 @@ const Navbar = () => {
                   {link.label}
                 </a>
               ))}
-              <Button variant="hero" size="sm" className="w-fit">
-                Get Started
+              <Button variant="hero" size="sm" className="w-fit" asChild>
+                <a href="#programs">Get Started</a>
               </Button>
             </div>
           </div>
