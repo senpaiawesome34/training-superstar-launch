@@ -4,12 +4,12 @@ const benefits = [
   {
     icon: TrendingUp,
     title: "Proven Results",
-    description: "95% of our trainees pass their IPPT on the first attempt after completing our program.",
+    description: "100% of our trainees pass their IPPT on the first attempt after completing our program.",
   },
   {
     icon: Users,
     title: "Expert Coaches",
-    description: "Learn from former national athletes and certified coaches who understand your journey.",
+    description: "Learn from National Athletes and Certified Coaches who Understand your Journey.",
   },
   {
     icon: Heart,
