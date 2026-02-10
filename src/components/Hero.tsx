@@ -67,7 +67,7 @@ const Hero = () => {
             </div>
             <div className="text-center">
               <div className="flex items-center justify-center w-16 h-16 mx-auto mb-2 rounded-lg bg-white overflow-hidden">
-                <img src={sportsgLogo} alt="Sport Singapore" className="w-12 h-12 object-contain" />
+                <img src={sportsgLogo} alt="Sport Singapore" className="w-16 h-16 object-contain" />
               </div>
               <div className="text-xl font-display font-bold text-foreground">SportSG</div>
               <div className="text-xs text-muted-foreground">Certified</div>
