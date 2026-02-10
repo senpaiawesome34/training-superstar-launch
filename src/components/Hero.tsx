@@ -59,7 +59,7 @@ const Hero = () => {
           {/* Stats */}
           <div className="grid grid-cols-3 gap-6 max-w-lg animate-fade-in animation-delay-600">
             <div className="text-center">
-              <div className="flex items-center justify-center w-16 h-16 mx-auto mb-2 rounded-lg bg-primary/10 overflow-hidden">
+              <div className="flex items-center justify-center w-16 h-16 mx-auto mb-2 rounded-lg bg-black overflow-hidden">
                 <img src={worldAthleticsLogo} alt="World Athletics" className="w-16 h-16 object-contain" />
               </div>
               <div className="text-xl font-display font-bold text-foreground">World Athletics</div>
