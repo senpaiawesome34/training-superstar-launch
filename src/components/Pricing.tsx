@@ -12,7 +12,6 @@ const tiers: { name: string; price: number; description: string; features: strin
     features: [
       "2 group sessions per week",
       "Basic running form analysis",
-      "Access to training app",
       "Community WhatsApp group",
     ],
     popular: false,
