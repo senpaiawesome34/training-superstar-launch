@@ -37,7 +37,7 @@ const tiers: { name: string; price: number; description: string; features: strin
   {
     name: "Going for Gold",
     price: 149,
-    description: "Elite-level coaching for those serious about smashing their IPPT or achieving peak performance.",
+    description: "Elite-level coaching for those serious about smashing their targets and achieving peak performance.",
     features: [
       "Unlimited group sessions",
       "Weekly 1-on-1 coaching",
