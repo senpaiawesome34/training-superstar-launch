@@ -14,7 +14,45 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      payments: {
+        Row: {
+          amount_total: number | null
+          created_at: string
+          currency: string | null
+          customer_email: string | null
+          id: string
+          payment_status: string
+          status: string
+          stripe_customer_id: string | null
+          stripe_session_id: string
+          stripe_subscription_id: string | null
+        }
+        Insert: {
+          amount_total?: number | null
+          created_at?: string
+          currency?: string | null
+          customer_email?: string | null
+          id?: string
+          payment_status: string
+          status?: string
+          stripe_customer_id?: string | null
+          stripe_session_id: string
+          stripe_subscription_id?: string | null
+        }
+        Update: {
+          amount_total?: number | null
+          created_at?: string
+          currency?: string | null
+          customer_email?: string | null
+          id?: string
+          payment_status?: string
+          status?: string
+          stripe_customer_id?: string | null
+          stripe_session_id?: string
+          stripe_subscription_id?: string | null
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
