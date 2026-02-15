@@ -8,7 +8,7 @@ const weeklySchedule = [
   { day: "Mon", focus: "Speed Work", description: "Interval training & sprint drills" },
   { day: "Wed", focus: "High Aerobic Conditioning", description: "Tempo runs & 2.4km pacing" },
   { day: "Thurs", focus: "Strength", description: "Push-ups, sit-ups & core conditioning" },
-  { day: "Sat", focus: "Endurance Run", description: "Conversational pace runs to strengthen the base" },
+  { day: "Sat", focus: "Endurance Run", description: "Comfortable runs to strengthen the base" },
 ];
 
 const phases = [
