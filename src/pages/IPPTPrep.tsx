@@ -6,9 +6,9 @@ import Footer from "@/components/Footer";
 
 const weeklySchedule = [
   { day: "Mon", focus: "Speed Work", description: "Interval training & sprint drills" },
-  { day: "Wed", focus: "Endurance", description: "Tempo runs & 2.4km pacing" },
-  { day: "Fri", focus: "Strength", description: "Push-ups, sit-ups & core conditioning" },
-  { day: "Sat", focus: "Mock Test", description: "Full IPPT simulation & tracking" },
+  { day: "Wed", focus: "High Aerobic Conditioning", description: "Tempo runs & 2.4km pacing" },
+  { day: "Thurs", focus: "Strength", description: "Push-ups, sit-ups & core conditioning" },
+  { day: "Sat", focus: "Endurance Run", description: "Conversational pace runs to strengthen the base" },
 ];
 
 const phases = [
