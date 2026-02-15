@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Clock, Users, Zap, Medal, ChevronRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const programs = [
   {
@@ -9,6 +10,7 @@ const programs = [
     icon: Medal,
     features: ["2.4km run focus", "Push-up training", "Sit-up drills", "Progress tracking"],
     popular: true,
+    link: "/ippt-prep",
   },
   {
     title: "Speed Fundamentals",
@@ -17,6 +19,7 @@ const programs = [
     icon: Zap,
     features: ["Running form", "Interval training", "Recovery techniques", "Flexibility work"],
     popular: false,
+    link: "/speed-fundamentals",
   },
   {
     title: "Group Training",
@@ -25,6 +28,7 @@ const programs = [
     icon: Users,
     features: ["Weekend sessions", "Track workouts", "Peer motivation", "Coach guidance"],
     popular: false,
+    link: null,
   },
 ];
 
@@ -90,13 +94,26 @@ const Programs = () => {
               </ul>
 
               {/* CTA */}
-              <Button
-                variant={program.popular ? "hero" : "heroOutline"}
-                className="w-full"
-              >
-                Learn More
-                <ChevronRight className="w-4 h-4" />
-              </Button>
+              {program.link ? (
+                <Button
+                  variant={program.popular ? "hero" : "heroOutline"}
+                  className="w-full"
+                  asChild
+                >
+                  <Link to={program.link}>
+                    Learn More
+                    <ChevronRight className="w-4 h-4" />
+                  </Link>
+                </Button>
+              ) : (
+                <Button
+                  variant={program.popular ? "hero" : "heroOutline"}
+                  className="w-full"
+                  disabled
+                >
+                  Coming Soon
+                </Button>
+              )}
             </div>
           ))}
         </div>
