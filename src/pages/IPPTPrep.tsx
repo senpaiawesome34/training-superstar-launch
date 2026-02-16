@@ -25,12 +25,12 @@ const phases = [
   {
     title: "Phase 3: Peak (Weeks 8-10)",
     description: "Fine-tune performance with race-pace efforts and full mock IPPT sessions.",
-    highlights: ["Mock IPPT every week", "Mental conditioning", "Taper & recovery strategy"],
+    highlights: ["Race Day Simulation", "Mental conditioning", "Taper & recovery strategy"],
   },
   {
     title: "Phase 4: Test Ready (Weeks 11-12)",
     description: "Strategic tapering and confidence-building leading into your actual IPPT.",
-    highlights: ["Light maintenance work", "Nutrition & sleep optimisation", "Day-of strategy planning"],
+    highlights: ["Last minute sharpening", "Nutrition & sleep optimisation", "Day-of strategy planning"],
   },
 ];
 
