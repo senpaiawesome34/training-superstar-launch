@@ -1,8 +1,8 @@
 import { Button } from "@/components/ui/button";
-import { Check, ChevronRight, Loader2 } from "lucide-react";
+import { Check, ChevronRight, Loader2, Flame } from "lucide-react";
 import { useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
-import { STRIPE_PRICES, TierKey } from "@/lib/stripe";
+import { STRIPE_PRICES, TierKey, STRIPE_ONE_TIME_PRICES, OneTimeTierKey } from "@/lib/stripe";
 import { useToast } from "@/hooks/use-toast";
 const tiers: { name: string; price: number; description: string; features: string[]; popular: boolean; tierKey: TierKey }[] = [
   {
@@ -167,6 +167,61 @@ const Pricing = () => {
         <p className="text-center text-muted-foreground text-sm mt-12">
           All plans are month-to-month. No long-term contracts. Cancel anytime.
         </p>
+
+        {/* All In - Crash Course */}
+        <div className="mt-16 max-w-4xl mx-auto">
+          <div className="relative bg-gradient-card rounded-2xl p-8 md:p-12 border border-primary shadow-glow transition-all duration-500">
+            <div className="absolute -top-3 left-1/2 -translate-x-1/2">
+              <span className="bg-gradient-hero text-primary-foreground text-xs font-bold px-4 py-1 rounded-full">
+                CRASH COURSE
+              </span>
+            </div>
+            <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8">
+              <div className="flex-1">
+                <div className="flex items-center gap-3 mb-2">
+                  <Flame className="w-6 h-6 text-primary" />
+                  <span className="text-primary font-semibold text-sm uppercase tracking-wider">
+                    Limited Time Commitment
+                  </span>
+                </div>
+                <h3 className="text-2xl md:text-3xl font-display font-bold mt-2 mb-4">
+                  All In
+                </h3>
+                <p className="text-muted-foreground mb-6">
+                  A 4-week intensive crash course for those who need rapid improvement in a short window. No fluff, no filler — just results.
+                </p>
+                <ul className="grid sm:grid-cols-2 gap-3">
+                  {[
+                    "4-week structured program",
+                    "5 sessions per week",
+                    "Personalized pace targets",
+                    "Weekly performance reviews",
+                    "Recovery & nutrition guidance",
+                    "Direct coach access",
+                  ].map((feature) => (
+                    <li key={feature} className="flex items-center gap-3 text-sm">
+                      <Check className="w-5 h-5 text-primary shrink-0" />
+                      <span className="text-foreground/80">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="flex flex-col items-center md:items-end gap-4">
+                <div className="text-center md:text-right">
+                  <div className="text-4xl font-display font-bold text-gradient">$75</div>
+                  <span className="text-muted-foreground text-sm">one-time payment</span>
+                </div>
+                <Button
+                  variant="hero"
+                  size="lg"
+                  disabled
+                >
+                  Coming Soon
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
 
         {/* School Championship Package */}
         <div className="mt-16 max-w-4xl mx-auto">
