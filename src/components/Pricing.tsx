@@ -188,16 +188,16 @@ const Pricing = () => {
                   All In
                 </h3>
                 <p className="text-muted-foreground mb-6">
-                  A 4-week intensive crash course for those who need rapid improvement in a short window. No fluff, no filler — just results.
+                  A 4-week intensive crash course for those who need rapid improvement in a short window. Do or die — just results.
                 </p>
                 <ul className="grid sm:grid-cols-2 gap-3">
                   {[
                     "4-week structured program",
-                    "5 sessions per week",
+                    "Intensive prep",
                     "Personalized pace targets",
                     "Weekly performance reviews",
-                    "Recovery & nutrition guidance",
-                    "Direct coach access",
+                    "All-encompassing guidance",
+                    "Immediate improvements",
                   ].map((feature) => (
                     <li key={feature} className="flex items-center gap-3 text-sm">
                       <Check className="w-5 h-5 text-primary shrink-0" />
