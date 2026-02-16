@@ -20,7 +20,7 @@ export type TierKey = keyof typeof STRIPE_PRICES;
 export const STRIPE_ONE_TIME_PRICES = {
   allIn: {
     priceId: "", // TODO: Add Stripe price ID
-    productId: "",
+    productId: "prod_TzTkl0N3Kt00hr",
   },
 } as const;
 
