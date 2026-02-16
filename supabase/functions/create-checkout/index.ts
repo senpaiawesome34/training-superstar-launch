@@ -23,9 +23,10 @@ serve(async (req) => {
     if (!stripeKey) throw new Error("STRIPE_SECRET_KEY is not set");
     logStep("Stripe key verified");
 
-    const { priceId, customerEmail } = await req.json();
+    const { priceId, customerEmail, mode } = await req.json();
     if (!priceId) throw new Error("Price ID is required");
-    logStep("Request parsed", { priceId, customerEmail });
+    const checkoutMode = mode === "payment" ? "payment" : "subscription";
+    logStep("Request parsed", { priceId, customerEmail, checkoutMode });
 
     const stripe = new Stripe(stripeKey, { apiVersion: "2025-08-27.basil" });
 
@@ -50,7 +51,7 @@ serve(async (req) => {
           quantity: 1,
         },
       ],
-      mode: "subscription",
+      mode: checkoutMode,
       success_url: `${origin}/payment-success?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${origin}/?canceled=true`,
     });
