@@ -181,7 +181,7 @@ const Pricing = () => {
                 <div className="flex items-center gap-3 mb-2">
                   <Flame className="w-6 h-6 text-primary" />
                   <span className="text-primary font-semibold text-sm uppercase tracking-wider">
-                    Limited Time Commitment
+                    Short On Time?
                   </span>
                 </div>
                 <h3 className="text-2xl md:text-3xl font-display font-bold mt-2 mb-4">
