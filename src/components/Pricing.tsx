@@ -54,6 +54,7 @@ const tiers: { name: string; price: number; description: string; features: strin
 
 const Pricing = () => {
   const [loadingTier, setLoadingTier] = useState<TierKey | null>(null);
+  const [loadingOneTime, setLoadingOneTime] = useState<OneTimeTierKey | null>(null);
   const { toast } = useToast();
 
   const handleSubscribe = async (tierKey: TierKey) => {
@@ -78,6 +79,31 @@ const Pricing = () => {
       });
     } finally {
       setLoadingTier(null);
+    }
+  };
+
+  const handleOneTimePayment = async (tierKey: OneTimeTierKey) => {
+    setLoadingOneTime(tierKey);
+    try {
+      const priceId = STRIPE_ONE_TIME_PRICES[tierKey].priceId;
+      
+      const { data, error } = await supabase.functions.invoke("create-checkout", {
+        body: { priceId, mode: "payment" },
+      });
+
+      if (error) throw error;
+      if (data?.url) {
+        window.open(data.url, "_blank");
+      }
+    } catch (error) {
+      console.error("Checkout error:", error);
+      toast({
+        title: "Error",
+        description: "Unable to start checkout. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setLoadingOneTime(null);
     }
   };
 
@@ -214,9 +240,20 @@ const Pricing = () => {
                 <Button
                   variant="hero"
                   size="lg"
-                  disabled
+                  onClick={() => handleOneTimePayment("allIn")}
+                  disabled={loadingOneTime !== null}
                 >
-                  Coming Soon
+                  {loadingOneTime === "allIn" ? (
+                    <>
+                      <Loader2 className="w-4 h-4 animate-spin" />
+                      Loading...
+                    </>
+                  ) : (
+                    <>
+                      Enroll Now
+                      <ChevronRight className="w-4 h-4" />
+                    </>
+                  )}
                 </Button>
               </div>
             </div>

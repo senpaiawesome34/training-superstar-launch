@@ -19,8 +19,8 @@ export type TierKey = keyof typeof STRIPE_PRICES;
 // One-time payment price IDs (to be configured)
 export const STRIPE_ONE_TIME_PRICES = {
   allIn: {
-    priceId: "", // TODO: Add Stripe price ID
-    productId: "",
+    priceId: "price_1T1UmrRJlDCCoPHpy1H3qTSg",
+    productId: "prod_TzTkl0N3Kt00hr",
   },
 } as const;
 
