@@ -8,12 +8,12 @@ const modules = [
   {
     title: "Week 1-2: Running Mechanics",
     description: "Learn the fundamentals of efficient running form — posture, foot strike, arm swing, and cadence.",
-    highlights: ["Video gait analysis", "Posture drills", "Cadence optimisation"],
+    highlights: ["Form analysis", "Posture drills", "Cadence optimisation"],
   },
   {
     title: "Week 3-4: Building Speed",
     description: "Introduction to interval training and tempo runs to develop your aerobic and anaerobic capacity.",
-    highlights: ["Interval training basics", "Tempo run structure", "Heart-rate zone training"],
+    highlights: ["Interval training basics", "Tempo run structure", "Effort levels training"],
   },
   {
     title: "Week 5: Recovery & Flexibility",
@@ -23,7 +23,7 @@ const modules = [
   {
     title: "Week 6: Test & Progress",
     description: "Put it all together with a benchmark run and personalised next-steps plan.",
-    highlights: ["Benchmark time trial", "Progress review", "Personalised improvement plan"],
+    highlights: ["Benchmark tests", "Progress review", "Personalised improvement plan"],
   },
 ];
 
@@ -31,8 +31,8 @@ const benefits = [
   "Improve your running form from day one",
   "Learn pacing strategies for any distance",
   "Build a sustainable training habit",
-  "Understand heart-rate zone training",
-  "Prevent common running injuries",
+  "Understand smart training",
+  "Reduce the risk of injuries",
   "Join a supportive community of runners",
 ];
 

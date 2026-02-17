@@ -214,7 +214,7 @@ const Pricing = () => {
                   All In
                 </h3>
                 <p className="text-muted-foreground mb-6">
-                  A 4-week intensive crash course for those who need rapid improvement in a short window. Do or die — just results.
+                  A 4-week intensive crash course for those needing rapid improvement in a short window. Do or die — All In for an All Out.
                 </p>
                 <ul className="grid sm:grid-cols-2 gap-3">
                   {[
