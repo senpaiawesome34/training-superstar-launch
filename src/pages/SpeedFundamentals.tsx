@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Zap, Clock, Target, TrendingUp, CheckCircle, ChevronRight } from "lucide-react";
+import speedHero from "@/assets/speed-fundamentals-hero.jpg";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
