@@ -25,8 +25,10 @@ const CTA = () => {
                   <ArrowRight className="ml-2" />
                 </a>
               </Button>
-              <Button variant="heroOutline" size="xl">
-                View Schedule
+              <Button variant="heroOutline" size="xl" asChild>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfpVLmzpJfZQVJ0yaW0zOYu01MJqyUchaY1VPyPqJObnhGx3Q/viewform?usp=dialog" target="_blank" rel="noopener noreferrer">
+                  Get In Touch
+                </a>
               </Button>
             </div>
           </div>
