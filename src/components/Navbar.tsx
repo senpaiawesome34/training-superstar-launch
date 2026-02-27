@@ -1,9 +1,13 @@
 import { useState } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
+  const isHome = location.pathname === "/";
 
   const navLinks = [
     { label: "Programs", href: "#programs" },
@@ -12,12 +16,20 @@ const Navbar = () => {
     { label: "Contact", href: "#contact" },
   ];
 
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    if (!isHome) {
+      e.preventDefault();
+      navigate("/" + href);
+    }
+    setIsOpen(false);
+  };
+
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-2">
+          <a href="/" className="flex items-center gap-2">
             <span className="text-xl font-display font-bold text-gradient">TSA</span>
             <span className="hidden sm:block text-sm font-medium text-muted-foreground">
               Training Superstar Academy
@@ -29,14 +41,20 @@ const Navbar = () => {
             {navLinks.map((link) => (
               <a
                 key={link.label}
-                href={link.href}
+                href={isHome ? link.href : `/${link.href}`}
                 className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+                onClick={(e) => handleNavClick(e, link.href)}
               >
                 {link.label}
               </a>
             ))}
             <Button variant="hero" size="sm" asChild>
-              <a href="#programs">Get Started</a>
+              <a
+                href={isHome ? "#programs" : "/#programs"}
+                onClick={(e) => handleNavClick(e, "#programs")}
+              >
+                Get Started
+              </a>
             </Button>
           </div>
 
@@ -56,15 +74,20 @@ const Navbar = () => {
               {navLinks.map((link) => (
                 <a
                   key={link.label}
-                  href={link.href}
+                  href={isHome ? link.href : `/${link.href}`}
                   className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
-                  onClick={() => setIsOpen(false)}
+                  onClick={(e) => handleNavClick(e, link.href)}
                 >
                   {link.label}
                 </a>
               ))}
               <Button variant="hero" size="sm" className="w-fit" asChild>
-                <a href="#programs">Get Started</a>
+                <a
+                  href={isHome ? "#programs" : "/#programs"}
+                  onClick={(e) => handleNavClick(e, "#programs")}
+                >
+                  Get Started
+                </a>
               </Button>
             </div>
           </div>
