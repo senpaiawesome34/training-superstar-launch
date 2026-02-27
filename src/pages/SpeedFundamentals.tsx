@@ -43,7 +43,17 @@ const SpeedFundamentals = () => {
       <Navbar />
 
       {/* Hero */}
-      <section className="pt-28 pb-16 bg-gradient-dark">
+      <section className="relative pt-28 pb-16">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <img
+            src={speedHero}
+            alt="Sprint training on track"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/90 to-background/50" />
+          <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
+        </div>
         <div className="container mx-auto px-4">
           <Link
             to="/"
