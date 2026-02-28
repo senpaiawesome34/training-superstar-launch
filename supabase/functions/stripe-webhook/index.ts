@@ -2,32 +2,38 @@ import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
 import Stripe from "https://esm.sh/stripe@18.5.0";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.49.4";
 
-const corsHeaders = {
-  "Access-Control-Allow-Origin": "*",
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type, x-supabase-client-platform, x-supabase-client-platform-version, x-supabase-client-runtime, x-supabase-client-runtime-version",
-};
-
 const logStep = (step: string, details?: any) => {
   const detailsStr = details ? ` - ${JSON.stringify(details)}` : "";
   console.log(`[STRIPE-WEBHOOK] ${step}${detailsStr}`);
 };
 
 serve(async (req) => {
+  // Webhooks are server-to-server; no CORS needed
   if (req.method === "OPTIONS") {
-    return new Response(null, { headers: corsHeaders });
+    return new Response(null, { status: 204 });
   }
 
   try {
     const stripeKey = Deno.env.get("STRIPE_SECRET_KEY");
     const webhookSecret = Deno.env.get("STRIPE_WEBHOOK_SECRET");
-    if (!stripeKey) throw new Error("STRIPE_SECRET_KEY is not set");
-    if (!webhookSecret) throw new Error("STRIPE_WEBHOOK_SECRET is not set");
+    if (!stripeKey || !webhookSecret) {
+      console.error("[STRIPE-WEBHOOK] Missing required secrets");
+      return new Response(JSON.stringify({ error: "Service configuration error" }), {
+        headers: { "Content-Type": "application/json" },
+        status: 500,
+      });
+    }
 
     const stripe = new Stripe(stripeKey, { apiVersion: "2025-08-27.basil" });
     const body = await req.text();
     const signature = req.headers.get("stripe-signature");
 
-    if (!signature) throw new Error("No Stripe signature found");
+    if (!signature) {
+      return new Response(JSON.stringify({ error: "Invalid request" }), {
+        headers: { "Content-Type": "application/json" },
+        status: 400,
+      });
+    }
 
     const event = await stripe.webhooks.constructEventAsync(body, signature, webhookSecret);
     logStep("Event received", { type: event.type, id: event.id });
@@ -102,14 +108,13 @@ serve(async (req) => {
     }
 
     return new Response(JSON.stringify({ received: true }), {
-      headers: { ...corsHeaders, "Content-Type": "application/json" },
+      headers: { "Content-Type": "application/json" },
       status: 200,
     });
   } catch (error) {
-    const errorMessage = error instanceof Error ? error.message : String(error);
-    logStep("ERROR", { message: errorMessage });
-    return new Response(JSON.stringify({ error: errorMessage }), {
-      headers: { ...corsHeaders, "Content-Type": "application/json" },
+    console.error("[STRIPE-WEBHOOK] Error:", error);
+    return new Response(JSON.stringify({ error: "Webhook processing failed" }), {
+      headers: { "Content-Type": "application/json" },
       status: 400,
     });
   }
