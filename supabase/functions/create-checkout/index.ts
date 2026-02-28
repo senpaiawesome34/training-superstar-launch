@@ -1,10 +1,18 @@
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
 import Stripe from "https://esm.sh/stripe@18.5.0";
 
-const corsHeaders = {
-  "Access-Control-Allow-Origin": "*",
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type, x-supabase-client-platform, x-supabase-client-platform-version, x-supabase-client-runtime, x-supabase-client-runtime-version",
-};
+const allowedOrigins = [
+  "https://training-superstar-academy.lovable.app",
+  "https://id-preview--5b67f0ab-ecfb-4e34-9263-d54007d0434e.lovable.app",
+];
+
+function getCorsHeaders(req: Request) {
+  const origin = req.headers.get("origin") || "";
+  return {
+    "Access-Control-Allow-Origin": allowedOrigins.includes(origin) ? origin : allowedOrigins[0],
+    "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type, x-supabase-client-platform, x-supabase-client-platform-version, x-supabase-client-runtime, x-supabase-client-runtime-version",
+  };
+}
 
 const logStep = (step: string, details?: any) => {
   const detailsStr = details ? ` - ${JSON.stringify(details)}` : '';
@@ -12,6 +20,8 @@ const logStep = (step: string, details?: any) => {
 };
 
 serve(async (req) => {
+  const corsHeaders = getCorsHeaders(req);
+
   if (req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders });
   }
@@ -20,13 +30,38 @@ serve(async (req) => {
     logStep("Function started");
 
     const stripeKey = Deno.env.get("STRIPE_SECRET_KEY");
-    if (!stripeKey) throw new Error("STRIPE_SECRET_KEY is not set");
-    logStep("Stripe key verified");
+    if (!stripeKey) {
+      console.error("[CREATE-CHECKOUT] STRIPE_SECRET_KEY is not set");
+      return new Response(JSON.stringify({ error: "Service temporarily unavailable" }), {
+        headers: { ...corsHeaders, "Content-Type": "application/json" },
+        status: 500,
+      });
+    }
 
-    const { priceId, customerEmail, mode } = await req.json();
-    if (!priceId) throw new Error("Price ID is required");
+    const body = await req.json();
+    const priceId = typeof body.priceId === "string" ? body.priceId.trim() : "";
+    const customerEmail = typeof body.customerEmail === "string" ? body.customerEmail.trim() : "";
+    const mode = body.mode;
+
+    // Validate priceId format
+    if (!priceId || !/^price_[a-zA-Z0-9]{10,}$/.test(priceId)) {
+      return new Response(JSON.stringify({ error: "Invalid request parameters" }), {
+        headers: { ...corsHeaders, "Content-Type": "application/json" },
+        status: 400,
+      });
+    }
+
+    // Validate email if provided
+    if (customerEmail && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(customerEmail)) {
+      return new Response(JSON.stringify({ error: "Invalid email address" }), {
+        headers: { ...corsHeaders, "Content-Type": "application/json" },
+        status: 400,
+      });
+    }
+
+    // Validate mode
     const checkoutMode = mode === "payment" ? "payment" : "subscription";
-    logStep("Request parsed", { priceId, customerEmail, checkoutMode });
+    logStep("Request validated", { priceId, checkoutMode });
 
     const stripe = new Stripe(stripeKey, { apiVersion: "2025-08-27.basil" });
 
@@ -40,11 +75,11 @@ serve(async (req) => {
       }
     }
 
-    const origin = req.headers.get("origin") || "https://id-preview--5b67f0ab-ecfb-4e34-9263-d54007d0434e.lovable.app";
+    const origin = req.headers.get("origin") || allowedOrigins[0];
 
     const session = await stripe.checkout.sessions.create({
       customer: customerId,
-      customer_email: customerId ? undefined : customerEmail,
+      customer_email: customerId ? undefined : (customerEmail || undefined),
       line_items: [
         {
           price: priceId,
@@ -56,16 +91,15 @@ serve(async (req) => {
       cancel_url: `${origin}/?canceled=true`,
     });
 
-    logStep("Checkout session created", { sessionId: session.id, url: session.url });
+    logStep("Checkout session created", { sessionId: session.id });
 
     return new Response(JSON.stringify({ url: session.url }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
       status: 200,
     });
   } catch (error) {
-    const errorMessage = error instanceof Error ? error.message : String(error);
-    logStep("ERROR", { message: errorMessage });
-    return new Response(JSON.stringify({ error: errorMessage }), {
+    console.error("[CREATE-CHECKOUT] Error:", error);
+    return new Response(JSON.stringify({ error: "An error occurred. Please try again later." }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
       status: 500,
     });
