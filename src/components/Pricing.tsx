@@ -234,7 +234,7 @@ const Pricing = () => {
               </div>
               <div className="flex flex-col items-center md:items-end gap-4">
                 <div className="text-center md:text-right">
-                  <div className="text-4xl font-display font-bold text-gradient">$75</div>
+                  <div className="text-4xl font-display font-bold text-gradient">$99</div>
                   <span className="text-muted-foreground text-sm">one-time payment</span>
                 </div>
                 <Button
