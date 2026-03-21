@@ -67,7 +67,7 @@ serve(async (req) => {
       }
     }
 
-    const origin = req.headers.get("origin") || allowedOrigins[0];
+    const origin = req.headers.get("origin") || "https://training-superstar-academy.lovable.app";
 
     const session = await stripe.checkout.sessions.create({
       customer: customerId,
