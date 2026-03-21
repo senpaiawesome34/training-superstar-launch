@@ -25,7 +25,7 @@ const phases = [
   },
   {
     title: "Phase 3: Peak (Weeks 8-10)",
-    description: "Fine-tune performance with race-pace efforts and full mock IPPT sessions.",
+    description: "Fine-tune performance with race-pace efforts and specific sharpening.",
     highlights: ["Race Day Simulation", "Mental conditioning", "Taper & recovery strategy"],
   },
   {
