@@ -1,18 +1,10 @@
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
 import Stripe from "https://esm.sh/stripe@18.5.0";
 
-const allowedOrigins = [
-  "https://training-superstar-academy.lovable.app",
-  "https://id-preview--5b67f0ab-ecfb-4e34-9263-d54007d0434e.lovable.app",
-];
-
-function getCorsHeaders(req: Request) {
-  const origin = req.headers.get("origin") || "";
-  return {
-    "Access-Control-Allow-Origin": allowedOrigins.includes(origin) ? origin : allowedOrigins[0],
-    "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type, x-supabase-client-platform, x-supabase-client-platform-version, x-supabase-client-runtime, x-supabase-client-runtime-version",
-  };
-}
+const corsHeaders = {
+  "Access-Control-Allow-Origin": "*",
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type, x-supabase-client-platform, x-supabase-client-platform-version, x-supabase-client-runtime, x-supabase-client-runtime-version",
+};
 
 const logStep = (step: string, details?: any) => {
   const detailsStr = details ? ` - ${JSON.stringify(details)}` : '';
@@ -20,7 +12,7 @@ const logStep = (step: string, details?: any) => {
 };
 
 serve(async (req) => {
-  const corsHeaders = getCorsHeaders(req);
+  
 
   if (req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders });
@@ -75,7 +67,7 @@ serve(async (req) => {
       }
     }
 
-    const origin = req.headers.get("origin") || allowedOrigins[0];
+    const origin = req.headers.get("origin") || "https://training-superstar-academy.lovable.app";
 
     const session = await stripe.checkout.sessions.create({
       customer: customerId,
