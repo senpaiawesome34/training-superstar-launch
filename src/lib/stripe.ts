@@ -19,7 +19,7 @@ export type TierKey = keyof typeof STRIPE_PRICES;
 // One-time payment price IDs (to be configured)
 export const STRIPE_ONE_TIME_PRICES = {
   allIn: {
-    priceId: "price_1T1UmrRJlDCCoPHpy1H3qTSg",
+    priceId: "price_1TDH1mRJlDCCoPHpBvYSglSE",
     productId: "prod_TzTkl0N3Kt00hr",
   },
 } as const;
