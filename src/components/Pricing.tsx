@@ -150,7 +150,7 @@ const Pricing = () => {
               {/* Price */}
               <div className="flex items-baseline gap-1 mb-4">
                 <span className="text-4xl font-display font-bold text-gradient">${tier.price}</span>
-                <span className="text-muted-foreground">/month</span>
+                <span className="text-muted-foreground">/week</span>
               </div>
 
               {/* Description */}
@@ -191,7 +191,11 @@ const Pricing = () => {
 
         {/* Footer Note */}
         <p className="text-center text-muted-foreground text-sm mt-12">
-          All plans are month-to-month. No long-term contracts. Cancel anytime.
+          All plans are week-to-week. No long-term contracts. Cancel anytime.
+        </p>
+        <p className="text-center text-muted-foreground text-sm mt-4">
+          🎓 <span className="text-foreground font-medium">Students & NSFs:</span>{" "}
+          <a href="#contact" className="text-primary hover:underline">Contact us</a> for a special discount.
         </p>
 
         {/* All In - Crash Course */}
@@ -234,7 +238,7 @@ const Pricing = () => {
               </div>
               <div className="flex flex-col items-center md:items-end gap-4">
                 <div className="text-center md:text-right">
-                  <div className="text-4xl font-display font-bold text-gradient">$99</div>
+                  <div className="text-4xl font-display font-bold text-gradient">$250</div>
                   <span className="text-muted-foreground text-sm">one-time payment</span>
                 </div>
                 <Button
