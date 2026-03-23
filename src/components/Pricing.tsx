@@ -195,7 +195,7 @@ const Pricing = () => {
         </p>
         <p className="text-center text-muted-foreground text-sm mt-4">
           🎓 <span className="text-foreground font-medium">Students & NSFs:</span>{" "}
-          <a href="#contact" className="text-primary hover:underline">Contact us</a> for a special discount.
+          <a href="#contact" className="text-primary hover:underline">Contact us via email</a> for a special discount.
         </p>
 
         {/* All In - Crash Course */}
