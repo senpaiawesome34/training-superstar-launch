@@ -8,6 +8,7 @@ import Index from "./pages/Index";
 import PaymentSuccess from "./pages/PaymentSuccess";
 import IPPTPrep from "./pages/IPPTPrep";
 import SpeedFundamentals from "./pages/SpeedFundamentals";
+import TestimonialsPage from "./pages/Testimonials";
 import NotFound from "./pages/NotFound";
 
 const ScrollToTop = () => {
@@ -31,6 +32,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/ippt-prep" element={<IPPTPrep />} />
           <Route path="/speed-fundamentals" element={<SpeedFundamentals />} />
+          <Route path="/testimonials" element={<TestimonialsPage />} />
           <Route path="/payment-success" element={<PaymentSuccess />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
