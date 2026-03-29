@@ -30,7 +30,7 @@ const testimonials = [
     name: "Evan Chan",
     role: "NSF, 19",
     content:
-      "TSA is the GOAT. They helped me improve my 2.4km from 11:11 to 9:40 in just 3 weeks — something I genuinely never thought was possible. Thanks to their coaching, I achieved my goal of getting Commando Gold for my IPPT. They clearly know their craft and bring a wealth of experience. Their training plans are detailed, personalised, and effective, and they consistently push and motivate you, even on days when you don't feel like training. I've gained tremendous value from TSA and would 10/10 recommend it to anyone looking to rapidly improve their running. They are also all really chill and easy to befriend",
+      "TSA is the GOAT. They helped me improve my 2.4km from 11:11 to 9:40 in just 3 weeks — something I genuinely never thought was possible. Thanks to their coaching, I achieved my goal of getting Commando Gold for my IPPT. They clearly know their craft and bring a wealth of experience. Their training plans are detailed, personalised, and effective, and they consistently push and motivate you, even on days when you don't feel like training. I've gained tremendous value from TSA and would 10/10 recommend it to anyone looking to rapidly improve their running. They are also all really chill and easy to befriend :_)",
     rating: 5,
   },
 ];
