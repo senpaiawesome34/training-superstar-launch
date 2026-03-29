@@ -1,4 +1,6 @@
 import { Star, Quote } from "lucide-react";
+import { useNavigate } from "react-router-dom";
+import { Button } from "@/components/ui/button";
 
 const testimonials = [
   {
@@ -83,8 +85,27 @@ const Testimonials = () => {
             </div>
           ))}
         </div>
+
+        {/* View More Button */}
+        <div className="text-center mt-12">
+          <ViewMoreButton />
+        </div>
       </div>
     </section>
+  );
+};
+
+const ViewMoreButton = () => {
+  const navigate = useNavigate();
+  return (
+    <Button
+      variant="outline"
+      size="lg"
+      onClick={() => navigate("/testimonials")}
+      className="border-primary/30 hover:bg-primary/10 hover:border-primary/50"
+    >
+      View More Stories
+    </Button>
   );
 };
 
