@@ -298,7 +298,11 @@ const Pricing = () => {
                 <div className="text-center md:text-right">
                   <div className="text-3xl font-display font-bold text-gradient">Custom Pricing</div>
                 </div>
-                <Button variant="hero" size="lg">
+                <Button
+                  variant="hero"
+                  size="lg"
+                  onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
+                >
                   Contact Us
                   <ChevronRight className="w-4 h-4" />
                 </Button>
