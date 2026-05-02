@@ -59,7 +59,7 @@ const CTA = () => {
               </div>
               <div>
                 <div className="text-sm text-muted-foreground">Phone</div>
-                <div className="font-medium">+65 98208703</div>
+                <div className="font-medium"></div>
               </div>
             </div>
           </div>
