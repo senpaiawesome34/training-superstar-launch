@@ -13,10 +13,17 @@ const Navbar = () => {
     { label: "Programs", href: "#programs" },
     { label: "Why Us", href: "#why-us" },
     { label: "Testimonials", href: "#testimonials" },
+    { label: "Shop", href: "/shop", isRoute: true },
     { label: "Contact", href: "#contact" },
   ];
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    if (href.startsWith("/")) {
+      e.preventDefault();
+      navigate(href);
+      setIsOpen(false);
+      return;
+    }
     if (!isHome) {
       e.preventDefault();
       navigate("/" + href);
@@ -41,7 +48,7 @@ const Navbar = () => {
             {navLinks.map((link) => (
               <a
                 key={link.label}
-                href={isHome ? link.href : `/${link.href}`}
+                href={link.isRoute ? link.href : isHome ? link.href : `/${link.href}`}
                 className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
                 onClick={(e) => handleNavClick(e, link.href)}
               >
@@ -74,7 +81,7 @@ const Navbar = () => {
               {navLinks.map((link) => (
                 <a
                   key={link.label}
-                  href={isHome ? link.href : `/${link.href}`}
+                  href={link.isRoute ? link.href : isHome ? link.href : `/${link.href}`}
                   className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
                   onClick={(e) => handleNavClick(e, link.href)}
                 >
