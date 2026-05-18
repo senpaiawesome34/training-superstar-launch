@@ -4,6 +4,7 @@ import Programs from "@/components/Programs";
 import Pricing from "@/components/Pricing";
 import WhyUs from "@/components/WhyUs";
 import Testimonials from "@/components/Testimonials";
+import ShopPromo from "@/components/ShopPromo";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
 
@@ -16,6 +17,7 @@ const Index = () => {
       <Pricing />
       <WhyUs />
       <Testimonials />
+      <ShopPromo />
       <CTA />
       <Footer />
     </div>
