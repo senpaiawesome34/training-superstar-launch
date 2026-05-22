@@ -51,12 +51,21 @@ const ProductImage = ({ images, name }: { images?: string[]; name: string }) => 
 
   return (
     <div className="relative aspect-square bg-muted overflow-hidden">
-      <img
-        src={images[idx]}
-        alt={`${name} - image ${idx + 1}`}
-        className="w-full h-full object-cover"
-        loading="lazy"
-      />
+      <div
+        className="flex h-full w-full transition-transform duration-500 ease-out"
+        style={{ transform: `translateX(-${idx * 100}%)` }}
+      >
+        {images.map((src, i) => (
+          <img
+            key={i}
+            src={src}
+            alt={`${name} - image ${i + 1}`}
+            className="h-full w-full flex-shrink-0 object-cover"
+            loading="lazy"
+            draggable={false}
+          />
+        ))}
+      </div>
       {images.length > 1 && (
         <>
           <button
