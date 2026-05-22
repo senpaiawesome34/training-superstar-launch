@@ -21,11 +21,11 @@ type Product = {
 const products: Product[] = [
   {
     id: 1,
-    name: "TSA Statement Crew Socks",
+    name: "Crew Socks",
     price: "$3.00 / pair",
     clientPrice: "$2.80 for TSA Clients (verification required)",
     description:
-      "Premium-quality crew socks featuring bold statement designs. Made in Korea. One size fits most.",
+      "Light, economical and durable crew socks featuring bold brands. Made in Korea. One size fits most.",
     images: [socks1, socks2],
   },
   { id: 2, name: "Coming Soon", price: "TBA", description: "Product description coming soon." },
