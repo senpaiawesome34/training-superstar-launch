@@ -48,7 +48,7 @@ const Navbar = () => {
             {navLinks.map((link) => (
               <a
                 key={link.label}
-                href={link.isRoute ? link.href : isHome ? link.href : `/${link.href}`}
+                href={isHome ? link.href : `/${link.href}`}
                 className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
                 onClick={(e) => handleNavClick(e, link.href)}
               >
@@ -81,7 +81,7 @@ const Navbar = () => {
               {navLinks.map((link) => (
                 <a
                   key={link.label}
-                  href={link.isRoute ? link.href : isHome ? link.href : `/${link.href}`}
+                href={isHome ? link.href : `/${link.href}`}
                   className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
                   onClick={(e) => handleNavClick(e, link.href)}
                 >
