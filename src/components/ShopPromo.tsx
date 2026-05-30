@@ -6,7 +6,7 @@ const ShopPromo = () => {
   const navigate = useNavigate();
 
   return (
-    <section className="py-20 bg-gradient-to-b from-background to-muted/20 border-y border-border">
+    <section id="shop" className="py-20 bg-gradient-to-b from-background to-muted/20 border-y border-border">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto bg-gradient-card rounded-2xl p-8 md:p-12 border border-border relative overflow-hidden">
           {/* Decorative glow */}

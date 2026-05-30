@@ -13,7 +13,7 @@ const Navbar = () => {
     { label: "Programs", href: "#programs" },
     { label: "Why Us", href: "#why-us" },
     { label: "Testimonials", href: "#testimonials" },
-    { label: "Shop", href: "/shop", isRoute: true },
+    { label: "Shop", href: "#shop" },
     { label: "Contact", href: "#contact" },
   ];
 
