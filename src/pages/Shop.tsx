@@ -15,7 +15,11 @@ type Product = {
   clientPrice?: string;
   description: string;
   images?: string[];
+  orderUrl?: string;
 };
+
+const SOCKS_ORDER_FORM_URL =
+  "https://docs.google.com/forms/d/e/1FAIpQLSd3zPnC1ydf_pwWLKfbcNVHo1jbtKGr9i-l76gYrYw_R6e-9Q/viewform";
 
 // Products — replace name, price, and image as they become available
 const products: Product[] = [
@@ -27,6 +31,7 @@ const products: Product[] = [
     description:
       "Light, economical and durable crew socks featuring bold brands. Made in Korea. One size fits most.",
     images: [socks1, socks2],
+    orderUrl: SOCKS_ORDER_FORM_URL,
   },
   { id: 2, name: "Coming Soon", price: "TBA", description: "Product description coming soon." },
   { id: 3, name: "Coming Soon", price: "TBA", description: "Product description coming soon." },
@@ -141,9 +146,22 @@ const ShopPage = () => {
                       <span className="text-xs text-muted-foreground">{product.clientPrice}</span>
                     )}
                   </div>
-                  <Button size="sm" variant="outline" disabled>
-                    Add to Cart
-                  </Button>
+                  {product.orderUrl ? (
+                    <Button size="sm" variant="hero" asChild>
+                      <a
+                        href={product.orderUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={`Order ${product.name} via form`}
+                      >
+                        Add to Cart
+                      </a>
+                    </Button>
+                  ) : (
+                    <Button size="sm" variant="outline" disabled>
+                      Add to Cart
+                    </Button>
+                  )}
                 </div>
               </CardContent>
             </Card>
