@@ -44,6 +44,7 @@ const products: Product[] = [
     description:
       "Comprehensive health screening combining InBody 770 body composition, Meicet Pro-A skin analysis, and bone density screening. Understand your muscle mass, body fat, skin health, and bone strength to make smarter decisions for nutrition, fitness, and long-term wellness.",
     images: [bodyAnalysis1.url, bodyAnalysis2.url, bodyAnalysis3.url],
+    orderUrl: SOCKS_ORDER_FORM_URL,
   },
   { id: 3, name: "Coming Soon", price: "TBA", description: "Product description coming soon." },
   { id: 4, name: "Coming Soon", price: "TBA", description: "Product description coming soon." },
