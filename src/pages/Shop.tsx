@@ -7,6 +7,9 @@ import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import socks1 from "@/assets/socks-1.jpg";
 import socks2 from "@/assets/socks-2.jpg";
+import bodyAnalysis1 from "@/assets/body-analysis-1.jpg.asset.json";
+import bodyAnalysis2 from "@/assets/body-analysis-2.jpg.asset.json";
+import bodyAnalysis3 from "@/assets/body-analysis-3.jpg.asset.json";
 
 type Product = {
   id: number;
@@ -33,7 +36,15 @@ const products: Product[] = [
     images: [socks1, socks2],
     orderUrl: SOCKS_ORDER_FORM_URL,
   },
-  { id: 2, name: "Full Body Analysis", price: "$150 one-time", description: "Product description coming soon." },
+  {
+    id: 2,
+    name: "Full Body Analysis",
+    price: "$150 one-time",
+    clientPrice: "$120 for TSA Clients (verification required)",
+    description:
+      "Comprehensive health screening combining InBody 770 body composition, Meicet Pro-A skin analysis, and bone density screening. Understand your muscle mass, body fat, skin health, and bone strength to make smarter decisions for nutrition, fitness, and long-term wellness.",
+    images: [bodyAnalysis1.url, bodyAnalysis2.url, bodyAnalysis3.url],
+  },
   { id: 3, name: "Coming Soon", price: "TBA", description: "Product description coming soon." },
   { id: 4, name: "Coming Soon", price: "TBA", description: "Product description coming soon." },
   { id: 5, name: "Coming Soon", price: "TBA", description: "Product description coming soon." },
