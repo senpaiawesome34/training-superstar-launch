@@ -33,7 +33,7 @@ const products: Product[] = [
     images: [socks1, socks2],
     orderUrl: SOCKS_ORDER_FORM_URL,
   },
-  { id: 2, name: "Coming Soon", price: "TBA", description: "Product description coming soon." },
+  { id: 2, name: "Full Body Analysis", price: "$150 one-time", description: "Product description coming soon." },
   { id: 3, name: "Coming Soon", price: "TBA", description: "Product description coming soon." },
   { id: 4, name: "Coming Soon", price: "TBA", description: "Product description coming soon." },
   { id: 5, name: "Coming Soon", price: "TBA", description: "Product description coming soon." },
