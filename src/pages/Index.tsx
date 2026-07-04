@@ -4,6 +4,7 @@ import Programs from "@/components/Programs";
 import Pricing from "@/components/Pricing";
 import WhyUs from "@/components/WhyUs";
 import Testimonials from "@/components/Testimonials";
+import HallOfFame from "@/components/HallOfFame";
 import ShopPromo from "@/components/ShopPromo";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
@@ -17,6 +18,7 @@ const Index = () => {
       <Pricing />
       <WhyUs />
       <Testimonials />
+      <HallOfFame />
       <ShopPromo />
       <CTA />
       <Footer />
@@ -25,3 +27,4 @@ const Index = () => {
 };
 
 export default Index;
+
