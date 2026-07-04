@@ -1,4 +1,5 @@
-import { Trophy, Award, Star, Medal, Crown } from "lucide-react";
+import { Trophy, Award, Star, Medal, Crown, Zap } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const achievements = [
   {
