@@ -1,4 +1,5 @@
-import { Trophy, Award, Star, Medal, Crown } from "lucide-react";
+import { Trophy, Award, Star, Medal, Crown, Zap } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const achievements = [
   {
@@ -31,6 +32,13 @@ const achievements = [
     label: "Improvement Rate",
     description: "Every trainee walks away faster and stronger",
   },
+  {
+    icon: Zap,
+    stat: "Sub 7",
+    label: "2.4km Record Breaker",
+    description: "First sub 7-minute 2.4km performance by a full-time serviceman",
+    featured: true,
+  },
 ];
 
 const HallOfFame = () => {
@@ -54,26 +62,58 @@ const HallOfFame = () => {
         </div>
 
         {/* Achievements Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6">
-          {achievements.map((achievement) => (
-            <div
-              key={achievement.label}
-              className="group relative text-center p-8 rounded-2xl bg-gradient-card border border-border hover:border-primary/50 hover:shadow-glow transition-all duration-300"
-            >
-              <div className="w-14 h-14 mx-auto rounded-xl bg-primary/10 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
-                <achievement.icon className="w-7 h-7 text-primary" />
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+          {achievements
+            .filter((a) => !a.featured)
+            .map((achievement) => (
+              <div
+                key={achievement.label}
+                className="group relative text-center p-8 rounded-2xl bg-gradient-card border border-border hover:border-primary/50 hover:shadow-glow transition-all duration-300"
+              >
+                <div className="w-14 h-14 mx-auto rounded-xl bg-primary/10 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+                  <achievement.icon className="w-7 h-7 text-primary" />
+                </div>
+                <div className="text-4xl font-display font-bold text-gradient mb-2">
+                  {achievement.stat}
+                </div>
+                <h3 className="text-lg font-display font-bold mb-2">
+                  {achievement.label}
+                </h3>
+                <p className="text-sm text-muted-foreground">
+                  {achievement.description}
+                </p>
               </div>
-              <div className="text-4xl font-display font-bold text-gradient mb-2">
-                {achievement.stat}
-              </div>
-              <h3 className="text-lg font-display font-bold mb-2">
-                {achievement.label}
-              </h3>
-              <p className="text-sm text-muted-foreground">
-                {achievement.description}
-              </p>
+            ))}
+        </div>
+
+        {/* Featured Record Breaker */}
+        <div className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-primary/20 via-primary/10 to-primary/20 border-2 border-primary/50 shadow-glow p-8 sm:p-12 text-center mb-12">
+          <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-transparent to-primary/5 animate-pulse" />
+          <div className="relative z-10">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/20 border border-primary/40 text-primary font-semibold text-sm uppercase tracking-wider mb-6">
+              <Zap className="w-4 h-4" />
+              Record Breaker
             </div>
-          ))}
+            <div className="text-5xl sm:text-6xl md:text-7xl font-display font-bold text-gradient mb-4">
+              Sub 7
+            </div>
+            <h3 className="text-2xl sm:text-3xl font-display font-bold mb-4">
+              2.4km Performance
+            </h3>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Produced the first sub 7-minute 2.4km performance by a full-time serviceman.
+            </p>
+          </div>
+        </div>
+
+        {/* More Achievements Button — inactive until the section is built */}
+        <div className="text-center">
+          <Button variant="hero" size="lg" disabled>
+            More Achievements from our Athletes
+          </Button>
+          <p className="mt-3 text-sm text-muted-foreground">
+            Coming soon
+          </p>
         </div>
       </div>
     </section>
