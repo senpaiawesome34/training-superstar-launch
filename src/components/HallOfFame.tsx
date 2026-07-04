@@ -4,19 +4,19 @@ const achievements = [
   {
     icon: Trophy,
     stat: "1x",
-    label: "School Best",
+    label: "Specialist Cadet School Best",
     description: "Top trainee recognised across the cohort",
   },
   {
     icon: Award,
     stat: "1x",
-    label: "SCS Found Term COY Best",
+    label: "Specialist Cadet School Found Term COY Best",
     description: "Company Best in Specialist Cadet School",
   },
   {
     icon: Medal,
     stat: "1x",
-    label: "Best in PT",
+    label: "Best in PT, Specialist Cadet School",
     description: "Outstanding physical training performance",
   },
   {
