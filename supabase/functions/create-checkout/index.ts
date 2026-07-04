@@ -6,6 +6,21 @@ const corsHeaders = {
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type, x-supabase-client-platform, x-supabase-client-platform-version, x-supabase-client-runtime, x-supabase-client-runtime-version",
 };
 
+const ALLOWED_ORIGINS = new Set<string>([
+  "https://training-superstar-academy.lovable.app",
+  "https://id-preview--5b67f0ab-ecfb-4e34-9263-d54007d0434e.lovable.app",
+]);
+const DEFAULT_ORIGIN = "https://training-superstar-academy.lovable.app";
+
+const ALLOWED_PRICE_IDS = new Set<string>([
+  // Subscription prices
+  "price_1TE1FRRJlDCCoPHpq595LNkF",
+  "price_1TE1G9RJlDCCoPHpQigvpvhX",
+  "price_1TE1GpRJlDCCoPHpXt2JybI8",
+  // One-time prices
+  "price_1TE1KKRJlDCCoPHpuw0SXuIg",
+]);
+
 const logStep = (step: string, details?: any) => {
   const detailsStr = details ? ` - ${JSON.stringify(details)}` : '';
   console.log(`[CREATE-CHECKOUT] ${step}${detailsStr}`);
@@ -43,6 +58,14 @@ serve(async (req) => {
       });
     }
 
+    // Validate priceId against allowlist
+    if (!ALLOWED_PRICE_IDS.has(priceId)) {
+      return new Response(JSON.stringify({ error: "Invalid price" }), {
+        headers: { ...corsHeaders, "Content-Type": "application/json" },
+        status: 400,
+      });
+    }
+
     // Validate email if provided
     if (customerEmail && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(customerEmail)) {
       return new Response(JSON.stringify({ error: "Invalid email address" }), {
@@ -67,7 +90,8 @@ serve(async (req) => {
       }
     }
 
-    const origin = req.headers.get("origin") || "https://training-superstar-academy.lovable.app";
+    const requestOrigin = req.headers.get("origin") ?? "";
+    const origin = ALLOWED_ORIGINS.has(requestOrigin) ? requestOrigin : DEFAULT_ORIGIN;
 
     const session = await stripe.checkout.sessions.create({
       customer: customerId,
