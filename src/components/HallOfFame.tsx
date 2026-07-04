@@ -32,6 +32,13 @@ const achievements = [
     label: "Improvement Rate",
     description: "Every trainee walks away faster and stronger",
   },
+  {
+    icon: Zap,
+    stat: "Sub 7",
+    label: "2.4km Record Breaker",
+    description: "First sub 7-minute 2.4km performance by a full-time serviceman",
+    featured: true,
+  },
 ];
 
 const HallOfFame = () => {
