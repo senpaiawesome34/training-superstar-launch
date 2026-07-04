@@ -13,9 +13,11 @@ const Navbar = () => {
     { label: "Programs", href: "#programs" },
     { label: "Why Us", href: "#why-us" },
     { label: "Testimonials", href: "#testimonials" },
+    { label: "Hall of Fame", href: "#hall-of-fame" },
     { label: "Shop", href: "#shop" },
     { label: "Contact", href: "#contact" },
   ];
+
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     if (href.startsWith("/")) {
