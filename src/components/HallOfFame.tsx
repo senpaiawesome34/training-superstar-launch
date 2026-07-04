@@ -10,7 +10,7 @@ const achievements = [
   {
     icon: Award,
     stat: "1x",
-    label: "Specialist Cadet School Found Term COY Best",
+    label: "Specialist Cadet School Foundation Term Company Best",
     description: "Company Best in Specialist Cadet School",
   },
   {
@@ -22,8 +22,8 @@ const achievements = [
   {
     icon: Star,
     stat: "2x",
-    label: "100 PTers",
-    description: "Perfect scores on the IPPT fitness test",
+    label: "IPPT 100 Pointers",
+    description: "Perfect score on the IPPT fitness test",
   },
   {
     icon: Crown,
