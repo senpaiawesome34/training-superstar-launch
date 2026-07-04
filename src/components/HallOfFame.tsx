@@ -36,7 +36,7 @@ const achievements = [
     icon: Zap,
     stat: "Sub 7",
     label: "2.4km Record Breaker",
-    description: "First official-recorded sub 7-minute 2.4km performance by a full-time serviceman",
+    description: "First ever official-recorded sub-7 minute 2.4km performance by a full-time serviceman",
     featured: true,
   },
 ];
