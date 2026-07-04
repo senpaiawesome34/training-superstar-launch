@@ -37,11 +37,19 @@ serve(async (req) => {
     const stripe = new Stripe(stripeKey, { apiVersion: "2025-08-27.basil" });
     const session = await stripe.checkout.sessions.retrieve(sessionId);
 
+    const rawEmail = session.customer_details?.email || session.customer_email || "";
+    const maskEmail = (email: string) => {
+      if (!email || !email.includes("@")) return "";
+      const [local, domain] = email.split("@");
+      const visible = local.slice(0, 1);
+      return `${visible}${"*".repeat(Math.max(1, local.length - 1))}@${domain}`;
+    };
+
     return new Response(
       JSON.stringify({
         verified: session.payment_status === "paid",
         paymentStatus: session.payment_status,
-        customerEmail: session.customer_details?.email || session.customer_email,
+        customerEmail: maskEmail(rawEmail),
         amountTotal: session.amount_total,
         currency: session.currency,
       }),
