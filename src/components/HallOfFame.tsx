@@ -16,13 +16,13 @@ const achievements = [
   },
   {
     icon: Award,
-    stat: "1x",
+    stat: "2x",
     label: "Best in PT, Specialist Cadet School",
     description: "Outstanding physical training performance",
   },
   {
     icon: Crown,
-    stat: "2x",
+    stat: "3x",
     label: "IPPT 100 Pointers",
     description: "Perfect score on the IPPT fitness test",
   },
