@@ -1,29 +1,14 @@
 ## Goal
-Let customers place sock orders through a Google Form for now. Stripe checkout stays out of scope — payment will be handled manually (PayNow / bank transfer / invoice) until you're ready to wire up Stripe.
+Refresh Training Superstar Academy’s branding using the attached crest and its green, blue, and gold palette, while preserving every existing word and all white text.
 
-## What you'll do (outside Lovable)
-1. Create a Google Form with fields like:
-   - Name
-   - Email / phone (for confirmation)
-   - Quantity (pairs)
-   - Are you a TSA client? (Yes / No) — used for manual $2.80 verification
-   - Delivery method (self-collect / mail) + address if mail
-   - Notes
-2. Copy the **shareable form link** (the `https://forms.gle/...` or `https://docs.google.com/forms/d/e/.../viewform` URL).
-3. Send me that link and I'll wire it into the shop.
+## Changes
+- Prepare the attached crest as a clean transparent website logo without changing its artwork or lettering.
+- Replace the orange “TSA” text logos in the top navigation and footer with the new crest.
+- Use the crest anywhere else the interface currently presents the old TSA logo treatment.
+- Replace the current orange accent system with brand blue and green, reserving gold for selected highlights such as achievements and premium emphasis.
+- Update gradient text, primary buttons, outlines, icons, badges, glows, and focus states through shared design colours so every page stays consistent.
+- Keep backgrounds, white text, muted text, page wording, layouts, links, prices, and functionality unchanged.
 
-## What I'll change in the app
-Only `src/pages/Shop.tsx` — purely frontend, no backend changes.
-
-- Replace the disabled **Add to Cart** button on the Crew Socks card with an **Order via Form** button that opens the Google Form in a new tab (`target="_blank" rel="noopener noreferrer"`).
-- Keep the disabled "Add to Cart" placeholder on the other 5 "Coming Soon" cards.
-- Add a short note under the price: *"TSA Clients: indicate in the form for $2.80/pair pricing (verification required). A discount/payment instruction will be sent after we confirm your order."*
-- Keep the existing carousel, dual-price display, and layout exactly as they are.
-
-## Out of scope (for now)
-- No Stripe checkout, no edge function changes, no database changes.
-- No coupon code generation — TSA pricing handled manually via email reply for now.
-- When you're ready to add Stripe later, we can layer it on without disturbing this flow.
-
-## Next step
-Reply with the Google Form URL (and confirm the button label "Order via Form" works, or suggest your own).
+## Verification
+- Check the home page and secondary pages on desktop and mobile widths.
+- Confirm the crest is clear on the dark background, no wording changed, controls remain readable, and the preview builds without errors.
