@@ -74,7 +74,7 @@ const Hero = () => {
             </div>
             <div className="text-center">
               <div className="flex items-center justify-center w-16 h-16 mx-auto mb-2 rounded-lg bg-primary/10">
-                <Trophy className="w-8 h-8 text-primary" />
+                <Trophy className="w-8 h-8 text-brand-gold" />
               </div>
               <div className="text-xl font-display font-bold text-foreground">Gold</div>
               <div className="text-xs text-muted-foreground">Standard</div>

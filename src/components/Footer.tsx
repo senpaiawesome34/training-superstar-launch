@@ -1,4 +1,5 @@
 import { Instagram, Facebook, Youtube, Send } from "lucide-react";
+import tsaLogo from "@/assets/tsa-logo.png";
 
 const Footer = () => {
   return (
@@ -7,7 +8,11 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           {/* Logo */}
           <div className="flex items-center gap-2">
-            <span className="text-xl font-display font-bold text-gradient">TSA</span>
+            <img
+              src={tsaLogo}
+              alt="Training Superstar Academy"
+              className="h-14 w-14 object-contain"
+            />
             <span className="text-sm text-muted-foreground">
               Training Superstar Academy
             </span>
