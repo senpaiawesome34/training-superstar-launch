@@ -71,7 +71,7 @@ const HallOfFame = () => {
                 className="group relative text-center p-8 rounded-2xl bg-gradient-card border border-border hover:border-primary/50 hover:shadow-glow transition-all duration-300"
               >
                 <div className="w-14 h-14 mx-auto rounded-xl bg-primary/10 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
-                  <achievement.icon className="w-7 h-7 text-primary" />
+                  <achievement.icon className="w-7 h-7 text-brand-gold" />
                 </div>
                 <div className="text-4xl font-display font-bold text-gradient mb-2">
                   {achievement.stat}
@@ -90,7 +90,7 @@ const HallOfFame = () => {
         <div className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-primary/20 via-primary/10 to-primary/20 border-2 border-primary/50 shadow-glow p-8 sm:p-12 text-center mb-12">
           <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-transparent to-primary/5 animate-pulse" />
           <div className="relative z-10">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/20 border border-primary/40 text-primary font-semibold text-sm uppercase tracking-wider mb-6">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/20 border border-brand-gold/40 text-brand-gold font-semibold text-sm uppercase tracking-wider mb-6">
               <Zap className="w-4 h-4" />
               Record Breaker
             </div>
