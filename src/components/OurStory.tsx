@@ -27,13 +27,13 @@ const OurStory = () => {
           </p>
         </div>
 
-        {/* Bridge image — full width */}
+        {/* Interclub night photo — full width */}
         <div className="max-w-5xl mx-auto mb-16">
           <div className="rounded-2xl overflow-hidden border border-border shadow-card">
             <img
-              src={bridgeImg.url}
-              alt="TSA athlete racing across a bridge at a road race"
-              className="w-full h-64 sm:h-80 md:h-96 object-cover"
+              src={interclubImg.url}
+              alt="TSA athletes at the SA Interclub Championships under the track lights"
+              className="w-full h-64 sm:h-80 md:h-96 object-cover object-top"
               loading="lazy"
             />
           </div>
