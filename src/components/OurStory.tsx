@@ -71,9 +71,9 @@ const OurStory = () => {
           </div>
         </div>
 
-        {/* Ethos block with track image beside it */}
+        {/* Ethos block with track image beside it (image on the left) */}
         <div className="grid md:grid-cols-2 gap-10 md:gap-14 items-center mb-20">
-          <div className="bg-gradient-card rounded-3xl border border-border p-8 sm:p-12 shadow-card order-2 md:order-1">
+          <div className="bg-gradient-card rounded-3xl border border-border p-8 sm:p-12 shadow-card order-2">
             <span className="text-primary font-semibold text-sm uppercase tracking-wider">
               Our Ethos
             </span>
@@ -100,7 +100,7 @@ const OurStory = () => {
               </p>
             </div>
           </div>
-          <div className="rounded-2xl overflow-hidden border border-border shadow-card order-1 md:order-2">
+          <div className="rounded-2xl overflow-hidden border border-border shadow-card order-1">
             <img
               src={trackImg.url}
               alt="TSA athlete celebrating across the finish line on the track"
@@ -129,7 +129,7 @@ const OurStory = () => {
             <img
               src={bridgeImg.url}
               alt="TSA athlete racing across a bridge at a road race"
-              className="w-full h-64 sm:h-80 md:h-96 object-cover"
+              className="w-full h-auto object-cover"
               loading="lazy"
             />
           </div>
