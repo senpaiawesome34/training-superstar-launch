@@ -1,6 +1,7 @@
-import bridgeImg from "@/assets/our-story-bridge.jpg.asset.json";
+import interclubImg from "@/assets/our-story-interclub.jpg.asset.json";
 import trackImg from "@/assets/our-story-track.jpg.asset.json";
 import teamImg from "@/assets/our-story-team.jpg.asset.json";
+import bridgeImg from "@/assets/our-story-bridge.jpg.asset.json";
 
 const OurStory = () => {
   return (
