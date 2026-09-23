@@ -39,7 +39,7 @@ const OurStory = () => {
           </div>
         </div>
 
-        {/* Origin story: text + track image */}
+        {/* Origin story: text + team image */}
         <div className="grid md:grid-cols-2 gap-10 md:gap-14 items-center mb-20">
           <div className="space-y-6">
             <h3 className="text-2xl font-display font-bold">
@@ -63,21 +63,21 @@ const OurStory = () => {
           </div>
           <div className="rounded-2xl overflow-hidden border border-border shadow-card">
             <img
-              src={trackImg.url}
-              alt="TSA athlete celebrating across the finish line on the track"
+              src={teamImg.url}
+              alt="TSA athletes celebrating together after a race"
               className="w-full h-full min-h-72 object-cover transition-transform duration-500 hover:scale-105"
               loading="lazy"
             />
           </div>
         </div>
 
-        {/* Ethos block */}
-        <div className="max-w-3xl mx-auto text-center mb-20">
-          <div className="bg-gradient-card rounded-3xl border border-border p-8 sm:p-12 shadow-card">
+        {/* Ethos block with track image beside it */}
+        <div className="grid md:grid-cols-2 gap-10 md:gap-14 items-center mb-20">
+          <div className="bg-gradient-card rounded-3xl border border-border p-8 sm:p-12 shadow-card order-2 md:order-1">
             <span className="text-primary font-semibold text-sm uppercase tracking-wider">
               Our Ethos
             </span>
-            <p className="text-5xl sm:text-6xl md:text-7xl font-display font-bold mt-4 mb-8">
+            <p className="text-4xl sm:text-5xl md:text-6xl font-display font-bold mt-4 mb-8">
               <span className="text-gradient">"Do Better."</span>
             </p>
             <div className="space-y-6 text-left">
@@ -100,28 +100,38 @@ const OurStory = () => {
               </p>
             </div>
           </div>
-        </div>
-
-        {/* Mission: team image + text */}
-        <div className="grid md:grid-cols-2 gap-10 md:gap-14 items-center mb-16">
-          <div className="rounded-2xl overflow-hidden border border-border shadow-card order-2 md:order-1">
+          <div className="rounded-2xl overflow-hidden border border-border shadow-card order-1 md:order-2">
             <img
-              src={teamImg.url}
-              alt="TSA athletes celebrating together after a race"
+              src={trackImg.url}
+              alt="TSA athlete celebrating across the finish line on the track"
               className="w-full h-full min-h-72 object-cover transition-transform duration-500 hover:scale-105"
               loading="lazy"
             />
           </div>
-          <div className="space-y-6 order-1 md:order-2">
-            <p className="text-foreground/90 leading-relaxed">
-              At TSA, you run to build the sharpest, strongest version of yourself, first and
-              foremost. It is this exact culture of steady, uncompromising growth that drives us
-              forward as a brand.
-            </p>
-            <p className="text-foreground/90 leading-relaxed">
-              It's why we have made it our mission in expanding TSA to reach every athlete,
-              regardless of their level of aptitude or fitness.
-            </p>
+        </div>
+
+        {/* Mission */}
+        <div className="max-w-3xl mx-auto space-y-6 mb-16">
+          <p className="text-foreground/90 leading-relaxed">
+            At TSA, you run to build the sharpest, strongest version of yourself, first and
+            foremost. It is this exact culture of steady, uncompromising growth that drives us
+            forward as a brand.
+          </p>
+          <p className="text-foreground/90 leading-relaxed">
+            It's why we have made it our mission in expanding TSA to reach every athlete,
+            regardless of their level of aptitude or fitness.
+          </p>
+        </div>
+
+        {/* Bridge image above the closing ask */}
+        <div className="max-w-5xl mx-auto mb-16">
+          <div className="rounded-2xl overflow-hidden border border-border shadow-card">
+            <img
+              src={bridgeImg.url}
+              alt="TSA athlete racing across a bridge at a road race"
+              className="w-full h-64 sm:h-80 md:h-96 object-cover"
+              loading="lazy"
+            />
           </div>
         </div>
 
@@ -133,18 +143,6 @@ const OurStory = () => {
             <span className="text-gradient">Take your Game to the Next Level</span>.
           </p>
           <p className="text-muted-foreground text-lg mt-4">See you on the other side…</p>
-        </div>
-
-        {/* Bridge image — full width, closing the story */}
-        <div className="max-w-5xl mx-auto mt-16">
-          <div className="rounded-2xl overflow-hidden border border-border shadow-card">
-            <img
-              src={bridgeImg.url}
-              alt="TSA athlete racing across a bridge at a road race"
-              className="w-full h-64 sm:h-80 md:h-96 object-cover"
-              loading="lazy"
-            />
-          </div>
         </div>
       </div>
     </section>
