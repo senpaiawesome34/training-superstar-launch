@@ -71,13 +71,13 @@ const OurStory = () => {
           </div>
         </div>
 
-        {/* Ethos block */}
-        <div className="max-w-3xl mx-auto text-center mb-20">
-          <div className="bg-gradient-card rounded-3xl border border-border p-8 sm:p-12 shadow-card">
+        {/* Ethos block with track image beside it */}
+        <div className="grid md:grid-cols-2 gap-10 md:gap-14 items-center mb-20">
+          <div className="bg-gradient-card rounded-3xl border border-border p-8 sm:p-12 shadow-card order-2 md:order-1">
             <span className="text-primary font-semibold text-sm uppercase tracking-wider">
               Our Ethos
             </span>
-            <p className="text-5xl sm:text-6xl md:text-7xl font-display font-bold mt-4 mb-8">
+            <p className="text-4xl sm:text-5xl md:text-6xl font-display font-bold mt-4 mb-8">
               <span className="text-gradient">"Do Better."</span>
             </p>
             <div className="space-y-6 text-left">
@@ -99,6 +99,14 @@ const OurStory = () => {
                 <span className="text-brand-gold font-medium">elevated self</span>.
               </p>
             </div>
+          </div>
+          <div className="rounded-2xl overflow-hidden border border-border shadow-card order-1 md:order-2">
+            <img
+              src={trackImg.url}
+              alt="TSA athlete celebrating across the finish line on the track"
+              className="w-full h-full min-h-72 object-cover transition-transform duration-500 hover:scale-105"
+              loading="lazy"
+            />
           </div>
         </div>
 
