@@ -85,10 +85,10 @@ const OurStory = () => {
                 Coined during a spontaneous flash of inspiration, the phrase quickly took on a
                 deeper weight. It was forged in response to the quiet friction of everyday life —
                 the subtle, unspoken resistance that all athletes face when trying to pursue what
-                matters most to them: chasing a better tomorrow. It is a simple yet powerful and
-                poignant rebuttal to the banal tendency that so many fall into; to deride, demean
-                and critique others, instead of lending a helping hand and serving to uplift
-                instead of treading down upon others.
+                matters most to them: chasing a better tomorrow. It is a simple yet powerful and poignant 
+                rebuttal to the banal tendencies that so many fall into; deriding, demeaning and 
+                critiquing, instead of lending a helping hand and serving to uplift others rather 
+                than Treading Down Upon them. 
               </p>
               <p className="text-muted-foreground leading-relaxed">
                 It serves as a call for all athletes to{" "}
