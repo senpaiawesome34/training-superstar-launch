@@ -39,7 +39,7 @@ const OurStory = () => {
           </div>
         </div>
 
-        {/* Origin story: text + track image */}
+        {/* Origin story: text + team image */}
         <div className="grid md:grid-cols-2 gap-10 md:gap-14 items-center mb-20">
           <div className="space-y-6">
             <h3 className="text-2xl font-display font-bold">
@@ -63,8 +63,8 @@ const OurStory = () => {
           </div>
           <div className="rounded-2xl overflow-hidden border border-border shadow-card">
             <img
-              src={trackImg.url}
-              alt="TSA athlete celebrating across the finish line on the track"
+              src={teamImg.url}
+              alt="TSA athletes celebrating together after a race"
               className="w-full h-full min-h-72 object-cover transition-transform duration-500 hover:scale-105"
               loading="lazy"
             />
