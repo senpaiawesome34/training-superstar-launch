@@ -110,26 +110,28 @@ const OurStory = () => {
           </div>
         </div>
 
-        {/* Mission: team image + text */}
-        <div className="grid md:grid-cols-2 gap-10 md:gap-14 items-center mb-16">
-          <div className="rounded-2xl overflow-hidden border border-border shadow-card order-2 md:order-1">
+        {/* Mission */}
+        <div className="max-w-3xl mx-auto space-y-6 mb-16">
+          <p className="text-foreground/90 leading-relaxed">
+            At TSA, you run to build the sharpest, strongest version of yourself, first and
+            foremost. It is this exact culture of steady, uncompromising growth that drives us
+            forward as a brand.
+          </p>
+          <p className="text-foreground/90 leading-relaxed">
+            It's why we have made it our mission in expanding TSA to reach every athlete,
+            regardless of their level of aptitude or fitness.
+          </p>
+        </div>
+
+        {/* Bridge image above the closing ask */}
+        <div className="max-w-5xl mx-auto mb-16">
+          <div className="rounded-2xl overflow-hidden border border-border shadow-card">
             <img
-              src={teamImg.url}
-              alt="TSA athletes celebrating together after a race"
-              className="w-full h-full min-h-72 object-cover transition-transform duration-500 hover:scale-105"
+              src={bridgeImg.url}
+              alt="TSA athlete racing across a bridge at a road race"
+              className="w-full h-64 sm:h-80 md:h-96 object-cover"
               loading="lazy"
             />
-          </div>
-          <div className="space-y-6 order-1 md:order-2">
-            <p className="text-foreground/90 leading-relaxed">
-              At TSA, you run to build the sharpest, strongest version of yourself, first and
-              foremost. It is this exact culture of steady, uncompromising growth that drives us
-              forward as a brand.
-            </p>
-            <p className="text-foreground/90 leading-relaxed">
-              It's why we have made it our mission in expanding TSA to reach every athlete,
-              regardless of their level of aptitude or fitness.
-            </p>
           </div>
         </div>
 
@@ -141,18 +143,6 @@ const OurStory = () => {
             <span className="text-gradient">Take your Game to the Next Level</span>.
           </p>
           <p className="text-muted-foreground text-lg mt-4">See you on the other side…</p>
-        </div>
-
-        {/* Bridge image — full width, closing the story */}
-        <div className="max-w-5xl mx-auto mt-16">
-          <div className="rounded-2xl overflow-hidden border border-border shadow-card">
-            <img
-              src={bridgeImg.url}
-              alt="TSA athlete racing across a bridge at a road race"
-              className="w-full h-64 sm:h-80 md:h-96 object-cover"
-              loading="lazy"
-            />
-          </div>
         </div>
       </div>
     </section>
