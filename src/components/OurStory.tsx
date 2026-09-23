@@ -33,7 +33,7 @@ const OurStory = () => {
             <img
               src={interclubImg.url}
               alt="TSA athletes at the SA Interclub Championships under the track lights"
-              className="w-full h-64 sm:h-80 md:h-96 object-cover object-top"
+              className="w-full h-auto"
               loading="lazy"
             />
           </div>
