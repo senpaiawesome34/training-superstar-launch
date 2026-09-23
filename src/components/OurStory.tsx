@@ -1,6 +1,7 @@
-import bridgeImg from "@/assets/our-story-bridge.jpg.asset.json";
+import interclubImg from "@/assets/our-story-interclub.jpg.asset.json";
 import trackImg from "@/assets/our-story-track.jpg.asset.json";
 import teamImg from "@/assets/our-story-team.jpg.asset.json";
+import bridgeImg from "@/assets/our-story-bridge.jpg.asset.json";
 
 const OurStory = () => {
   return (
@@ -26,13 +27,13 @@ const OurStory = () => {
           </p>
         </div>
 
-        {/* Bridge image — full width */}
+        {/* Interclub night photo — full width */}
         <div className="max-w-5xl mx-auto mb-16">
           <div className="rounded-2xl overflow-hidden border border-border shadow-card">
             <img
-              src={bridgeImg.url}
-              alt="TSA athlete racing across a bridge at a road race"
-              className="w-full h-64 sm:h-80 md:h-96 object-cover"
+              src={interclubImg.url}
+              alt="TSA athletes at the SA Interclub Championships under the track lights"
+              className="w-full h-64 sm:h-80 md:h-96 object-cover object-top"
               loading="lazy"
             />
           </div>
@@ -132,6 +133,18 @@ const OurStory = () => {
             <span className="text-gradient">Take your Game to the Next Level</span>.
           </p>
           <p className="text-muted-foreground text-lg mt-4">See you on the other side…</p>
+        </div>
+
+        {/* Bridge image — full width, closing the story */}
+        <div className="max-w-5xl mx-auto mt-16">
+          <div className="rounded-2xl overflow-hidden border border-border shadow-card">
+            <img
+              src={bridgeImg.url}
+              alt="TSA athlete racing across a bridge at a road race"
+              className="w-full h-64 sm:h-80 md:h-96 object-cover"
+              loading="lazy"
+            />
+          </div>
         </div>
       </div>
     </section>
