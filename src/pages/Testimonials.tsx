@@ -4,7 +4,21 @@ import { Star, Quote, ArrowLeft } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
-const testimonials = [
+const slugify = (name: string) =>
+  name
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+
+type Testimonial = {
+  name: string;
+  role: string;
+  content: string;
+  rating: number;
+  journey?: string;
+};
+
+const testimonials: Testimonial[] = [
   {
     name: "S Y Chu",
     role: "NSman, 23",
@@ -113,6 +127,30 @@ const TestimonialsPage = () => {
                     </div>
                   </div>
                 </div>
+
+                {/* Read More */}
+                {testimonial.journey ? (
+                  <Button
+                    variant="outline"
+                    className="mt-6 w-full border-primary/30 hover:bg-primary/10 hover:border-primary/50"
+                    onClick={() => navigate(`/testimonials/${slugify(testimonial.name)}`)}
+                  >
+                    Read More
+                  </Button>
+                ) : (
+                  <div className="mt-6">
+                    <Button
+                      variant="outline"
+                      disabled
+                      className="w-full border-border/50 text-muted-foreground cursor-not-allowed"
+                    >
+                      Read More
+                    </Button>
+                    <p className="text-xs text-muted-foreground text-center mt-2">
+                      Full journey coming soon
+                    </p>
+                  </div>
+                )}
               </div>
             ))}
           </div>
