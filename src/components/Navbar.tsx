@@ -3,6 +3,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import tsaLogo from "@/assets/tsa-logo.png";
+import doBetter from "@/assets/do-better.png.asset.json";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
