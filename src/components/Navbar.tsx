@@ -53,7 +53,7 @@ const Navbar = () => {
               <img
                 src={doBetter.url}
                 alt="Do Better"
-                className="h-3 w-auto object-contain -ml-14"
+                className="h-3 w-auto object-contain"
               />
             </span>
           </a>
