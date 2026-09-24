@@ -21,7 +21,7 @@ const Footer = () => {
               <img
                 src={doBetter.url}
                 alt="Do Better"
-                className="h-3.5 w-auto object-contain"
+                className="h-3.5 w-auto object-contain -ml-16"
               />
             </div>
           </div>
