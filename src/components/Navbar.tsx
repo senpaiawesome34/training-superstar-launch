@@ -46,7 +46,7 @@ const Navbar = () => {
               alt="Training Superstar Academy"
               className="h-12 w-12 object-contain"
             />
-            <span className="flex flex-col gap-1 items-start">
+            <span className="hidden md:flex flex-col gap-1 items-start">
               <span className="text-sm font-medium text-muted-foreground">
                 Training Superstar Academy
               </span>
