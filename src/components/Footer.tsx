@@ -1,5 +1,6 @@
 import { Instagram, Facebook, Youtube, Send } from "lucide-react";
 import tsaLogo from "@/assets/tsa-logo.png";
+import doBetter from "@/assets/do-better.png.asset.json";
 
 const Footer = () => {
   return (
