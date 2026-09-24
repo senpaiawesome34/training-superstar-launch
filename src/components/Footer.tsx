@@ -1,5 +1,6 @@
 import { Instagram, Facebook, Youtube, Send } from "lucide-react";
 import tsaLogo from "@/assets/tsa-logo.png";
+import doBetter from "@/assets/do-better.png.asset.json";
 
 const Footer = () => {
   return (
@@ -13,9 +14,16 @@ const Footer = () => {
               alt="Training Superstar Academy"
               className="h-14 w-14 object-contain"
             />
-            <span className="text-sm text-muted-foreground">
-              Training Superstar Academy
-            </span>
+            <div className="flex flex-col gap-1.5">
+              <span className="text-sm text-muted-foreground">
+                Training Superstar Academy
+              </span>
+              <img
+                src={doBetter.url}
+                alt="Do Better"
+                className="h-3.5 w-auto object-contain"
+              />
+            </div>
           </div>
 
           {/* Links */}
