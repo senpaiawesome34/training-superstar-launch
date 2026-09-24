@@ -14,14 +14,14 @@ const Footer = () => {
               alt="Training Superstar Academy"
               className="h-14 w-14 object-contain"
             />
-            <div className="flex flex-col gap-1.5">
+            <div className="flex flex-col gap-1.5 items-start">
               <span className="text-sm text-muted-foreground">
                 Training Superstar Academy
               </span>
               <img
                 src={doBetter.url}
                 alt="Do Better"
-                className="h-3.5 w-auto object-contain"
+                className="h-3.5 w-auto object-contain object-left"
               />
             </div>
           </div>

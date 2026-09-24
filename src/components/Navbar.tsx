@@ -46,14 +46,14 @@ const Navbar = () => {
               alt="Training Superstar Academy"
               className="h-12 w-12 object-contain"
             />
-            <span className="hidden md:flex flex-col gap-1">
+            <span className="hidden md:flex flex-col gap-1 items-start">
               <span className="text-sm font-medium text-muted-foreground">
                 Training Superstar Academy
               </span>
               <img
                 src={doBetter.url}
                 alt="Do Better"
-                className="h-3 w-auto object-contain"
+                className="h-3 w-auto object-contain object-left"
               />
             </span>
           </a>
