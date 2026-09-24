@@ -58,49 +58,27 @@ const Navbar = () => {
             </span>
           </a>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
-            {navLinks.map((link) => (
-              <a
-                key={link.label}
-                href={isHome ? link.href : `/${link.href}`}
-                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
-                onClick={(e) => handleNavClick(e, link.href)}
-              >
-                {link.label}
-              </a>
-            ))}
-            <Button variant="hero" size="sm" asChild>
-              <a
-                href={isHome ? "#programs" : "/#programs"}
-                onClick={(e) => handleNavClick(e, "#programs")}
-              >
-                Get Started
-              </a>
-            </Button>
-          </div>
-
-          {/* Mobile Menu Button */}
+          {/* Menu Button */}
           <Button
             type="button"
             variant="ghost"
             size="icon"
-            className="md:hidden"
             aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
+            aria-expanded={isOpen}
             onClick={() => setIsOpen(!isOpen)}
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </Button>
         </div>
 
-        {/* Mobile Navigation */}
+        {/* Collapsible Navigation */}
         {isOpen && (
-          <div className="md:hidden py-4 border-t border-border animate-fade-in">
+          <div className="py-4 border-t border-border animate-fade-in">
             <div className="flex flex-col gap-4">
               {navLinks.map((link) => (
                 <a
                   key={link.label}
-                href={isHome ? link.href : `/${link.href}`}
+                  href={isHome ? link.href : `/${link.href}`}
                   className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
                   onClick={(e) => handleNavClick(e, link.href)}
                 >
