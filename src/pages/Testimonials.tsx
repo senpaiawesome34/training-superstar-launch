@@ -4,11 +4,18 @@ import { Star, Quote, ArrowLeft } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
-const testimonials = [
+type Testimonial = {
+  name: string;
+  role: string;
+  content: string;
+  rating: number;
+  journey?: string;
+};
+
+const testimonials: Testimonial[] = [
   {
     name: "S Y Chu",
     role: "NSman, 23",
-    journey: undefined as string | undefined,
     content:
       "I went from doubting myself to running a sub-10 minute 2.4km with only 3 weeks of proper training. TSA knew exactly how to push me while keeping training realistic and effective. Couldn't have done this without their guidance.",
     rating: 5,
