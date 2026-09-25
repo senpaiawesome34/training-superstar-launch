@@ -44,8 +44,8 @@ const WhyUs = () => {
           className="w-full h-full object-cover object-center"
           loading="lazy"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/90 to-background/70" />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/55 to-background/75" />
+        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/70 to-background/40" />
+        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/25 to-background/50" />
       </div>
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
