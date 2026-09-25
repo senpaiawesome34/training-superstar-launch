@@ -14,6 +14,7 @@ const Navbar = () => {
   const navLinks = [
     { label: "Programs", href: "#programs" },
     { label: "Why Us", href: "#why-us" },
+    { label: "Our Story", href: "#our-story" },
     { label: "Testimonials", href: "#testimonials" },
     { label: "Hall of Fame", href: "#hall-of-fame" },
     { label: "Shop", href: "#shop" },
