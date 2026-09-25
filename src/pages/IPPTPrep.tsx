@@ -3,7 +3,6 @@ import { ArrowLeft, Medal, Clock, Target, TrendingUp, CheckCircle, ChevronRight 
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import ipptHero from "@/assets/ippt-hero.png";
 
 const weeklySchedule = [
   { day: "Mon", focus: "Speed Work", description: "Interval training & sprint drills" },
@@ -42,16 +41,6 @@ const IPPTPrep = () => {
 
       {/* Hero */}
       <section className="relative pt-28 pb-16 overflow-hidden">
-        {/* Background Image */}
-        <div className="absolute inset-0 z-0">
-          <img
-            src={ipptHero}
-            alt="IPPT runner on track"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/90 to-background/50" />
-          <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
-        </div>
         <div className="container mx-auto px-4 relative z-10">
           <Link
             to="/"

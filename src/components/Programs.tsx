@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Clock, Users, Zap, Medal, ChevronRight } from "lucide-react";
+import { CalendarDays, Clock, Users, Zap, Medal, ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const programs = [
@@ -30,6 +30,15 @@ const programs = [
     popular: false,
     link: null,
   },
+  {
+    title: "8 Weeks to Peak",
+    description: "Special BYD Singapore International Marathon Clutch Up Program to help runners sharpen their fitness and arrive ready to race.",
+    duration: "October–November only",
+    icon: CalendarDays,
+    features: ["8-week race build", "Marathon-specific sessions", "Peak timing", "Seasonal intake"],
+    popular: false,
+    link: null,
+  },
 ];
 
 const Programs = () => {
@@ -51,7 +60,7 @@ const Programs = () => {
         </div>
 
         {/* Program Cards */}
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-8">
           {programs.map((program, index) => (
             <div
               key={program.title}
@@ -111,7 +120,7 @@ const Programs = () => {
                   className="w-full"
                   disabled
                 >
-                  Coming Soon
+                  {program.title === "8 Weeks to Peak" ? "Seasonal Program" : "Coming Soon"}
                 </Button>
               )}
             </div>

@@ -1,4 +1,5 @@
 import { CheckCircle2, Dumbbell, Heart, TrendingUp, Users, Smile } from "lucide-react";
+import ipptHero from "@/assets/ippt-hero.png";
 
 const benefits = [
   {
@@ -35,8 +36,18 @@ const benefits = [
 
 const WhyUs = () => {
   return (
-    <section id="why-us" className="py-24 bg-background">
-      <div className="container mx-auto px-4">
+    <section id="why-us" className="relative py-24 overflow-hidden">
+      <div className="absolute inset-0 z-0">
+        <img
+          src={ipptHero}
+          alt="IPPT runner on track"
+          className="w-full h-full object-cover object-center"
+          loading="lazy"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/90 to-background/70" />
+        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/55 to-background/75" />
+      </div>
+      <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
         <div className="text-center max-w-2xl mx-auto mb-16">
           <span className="text-primary font-semibold text-sm uppercase tracking-wider">
