@@ -39,8 +39,6 @@ export const journeys: Record<string, Journey> = {
         paragraphs: [
           "At a Christmas dinner in 2025, Marc — a family friend — shared his concerns about enlisting into the Physical Training Phase (PTP) intake. Despite multiple attempts, he had been unable to pass his pre-enlistee IPPT. With his next test booked for January 21, 2026, he was determined to clear the benchmark, pass his IPPT, and shorten his Basic Military Training (BMT) by two full months.",
         ],
-        callout:
-          "I've got IPPT in less than four weeks, and I'm currently stuck at 14:00. How can I pull that down to at least 12:20?",
       },
       {
         heading: "A Chance Meeting at Serangoon Stadium",
