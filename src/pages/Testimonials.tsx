@@ -32,6 +32,7 @@ const testimonials: Testimonial[] = [
     content:
       "Massive shout out to TSA for bringing my 2.4km run from 14+ mins to 11.5 mins over the course of a month, and it helped me pass my pre-enlistee IPPT for the first time! Could not have done it without their structured training programs and persistent motivation. Money very well spent!",
     rating: 5,
+    journey: "marc-menon",
   },
   {
     name: "Jared Goh",
