@@ -62,7 +62,7 @@ const TestimonialJourney = () => {
               "{journey.quote}"
             </p>
             <p className="text-sm text-muted-foreground mt-4">
-              — {journey.name}, before training with TSA
+              — {journey.name}, on training with TSA
             </p>
           </div>
 
