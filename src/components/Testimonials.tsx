@@ -1,6 +1,7 @@
 import { Star, Quote } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import marcPhoto from "@/assets/marc-menon.jpg.asset.json";
 
 const testimonials = [
   {
@@ -14,6 +15,8 @@ const testimonials = [
     role: "Pre-Enlistee, 19",
     content: "Massive shout out to TSA for bringing my 2.4km run from 14+ mins to 11.5 mins over the course of a month, and it helped me pass my pre-enlistee IPPT for the first time! Could not have done it without their structured training programs and persistent motivation. Money very well spent!",
     rating: 5,
+    photoUrl: marcPhoto.url,
+    journey: "marc-menon",
   },
   {
     name: "Jared Goh",
@@ -49,9 +52,20 @@ const Testimonials = () => {
               className="relative bg-gradient-card rounded-2xl p-8 border border-border hover:border-primary/30 transition-all duration-300"
             >
               {/* Quote Icon */}
-              <div className="absolute top-6 right-6 opacity-10">
-                <Quote className="w-12 h-12 text-primary" />
-              </div>
+              {!testimonial.photoUrl && (
+                <div className="absolute top-6 right-6 opacity-10">
+                  <Quote className="w-12 h-12 text-primary" />
+                </div>
+              )}
+
+              {/* Photo (top-right corner) */}
+              {testimonial.photoUrl && (
+                <img
+                  src={testimonial.photoUrl}
+                  alt={testimonial.name}
+                  className="absolute top-6 right-6 w-16 h-16 rounded-full object-cover object-center border-2 border-primary/40 shadow-glow"
+                />
+              )}
 
               {/* Rating */}
               <div className="flex gap-1 mb-6">
@@ -82,6 +96,9 @@ const Testimonials = () => {
                   </div>
                 </div>
               </div>
+
+              {/* Read More */}
+              {testimonial.journey && <ReadMoreButton journey={testimonial.journey} />}
             </div>
           ))}
         </div>
@@ -92,6 +109,20 @@ const Testimonials = () => {
         </div>
       </div>
     </section>
+  );
+};
+
+const ReadMoreButton = ({ journey }: { journey: string }) => {
+  const navigate = useNavigate();
+  return (
+    <Button
+      variant="outline"
+      size="sm"
+      onClick={() => navigate(`/testimonials/${journey}`)}
+      className="mt-6 w-full border-primary/30 hover:bg-primary/10 hover:border-primary/50"
+    >
+      Read More
+    </Button>
   );
 };
 
