@@ -26,7 +26,7 @@ export const journeys: Record<string, Journey> = {
     photoUrl: marcMenonAsset.url,
     photoAlt: "Marc Menon at a Christmas dinner in 2025",
     quote:
-      "I've got IPPT in less than four weeks, and I'm currently stuck at 14:00. How can I pull that down to at least 12:20?",
+      "Massive shout out to TSA for bringing my 2.4km run from 14+ mins to 11.5 mins over the course of a month, and it helped me pass my pre-enlistee IPPT for the first time! Could not have done it without their structured training programs and persistent motivation. Money very well spent!",
     stats: [
       { value: "14:00 → 11:38", label: "2.4km timing" },
       { value: "67 / 100", label: "IPPT score (61 to pass)" },
@@ -39,6 +39,8 @@ export const journeys: Record<string, Journey> = {
         paragraphs: [
           "At a Christmas dinner in 2025, Marc — a family friend — shared his concerns about enlisting into the Physical Training Phase (PTP) intake. Despite multiple attempts, he had been unable to pass his pre-enlistee IPPT. With his next test booked for January 21, 2026, he was determined to clear the benchmark, pass his IPPT, and shorten his Basic Military Training (BMT) by two full months.",
         ],
+        callout:
+          "I've got IPPT in less than four weeks, and I'm currently stuck at 14:00. How can I pull that down to at least 12:20?",
       },
       {
         heading: "A Chance Meeting at Serangoon Stadium",
