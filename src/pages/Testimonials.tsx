@@ -127,11 +127,19 @@ const TestimonialsPage = () => {
                   "{testimonial.content}"
                 </p>
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center">
-                    <span className="text-primary font-bold text-lg">
-                      {testimonial.name.charAt(0)}
-                    </span>
-                  </div>
+                  {testimonial.photoUrl ? (
+                    <img
+                      src={testimonial.photoUrl}
+                      alt={testimonial.name}
+                      className="w-[4.5rem] h-[4.5rem] rounded-full object-cover object-center border-2 border-primary/40 shadow-glow flex-shrink-0"
+                    />
+                  ) : (
+                    <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
+                      <span className="text-primary font-bold text-lg">
+                        {testimonial.name.charAt(0)}
+                      </span>
+                    </div>
+                  )}
                   <div>
                     <div className="font-semibold">{testimonial.name}</div>
                     <div className="text-sm text-muted-foreground">
