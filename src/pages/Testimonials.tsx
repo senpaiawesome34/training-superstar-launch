@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import { Star, Quote, ArrowLeft } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import marcPhoto from "@/assets/marc-menon.jpg.asset.json";
 
 const slugify = (name: string) =>
   name

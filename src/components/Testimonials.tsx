@@ -58,12 +58,12 @@ const Testimonials = () => {
                 </div>
               )}
 
-              {/* Photo (top-right corner) */}
+              {/* Photo (flush top-right corner) */}
               {testimonial.photoUrl && (
                 <img
                   src={testimonial.photoUrl}
                   alt={testimonial.name}
-                  className="absolute top-6 right-6 w-16 h-16 rounded-full object-cover object-center border-2 border-primary/40 shadow-glow"
+                  className="absolute top-2 right-2 w-16 h-16 rounded-full object-cover object-center border-2 border-primary/40 shadow-glow"
                 />
               )}
 
