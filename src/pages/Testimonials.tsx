@@ -104,17 +104,9 @@ const TestimonialsPage = () => {
                 key={testimonial.name}
                 className="relative bg-gradient-card rounded-2xl p-8 border border-border hover:border-primary/30 transition-all duration-300"
               >
-                {testimonial.photoUrl ? (
-                  <img
-                    src={testimonial.photoUrl}
-                    alt={testimonial.name}
-                    className="absolute top-2 right-2 w-16 h-16 rounded-full object-cover object-center border-2 border-primary/40 shadow-glow"
-                  />
-                ) : (
-                  <div className="absolute top-6 right-6 opacity-10">
-                    <Quote className="w-12 h-12 text-primary" />
-                  </div>
-                )}
+                <div className="absolute top-6 right-6 opacity-10">
+                  <Quote className="w-12 h-12 text-primary" />
+                </div>
                 <div className="flex gap-1 mb-6">
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <Star
