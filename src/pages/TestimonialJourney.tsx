@@ -100,6 +100,20 @@ const TestimonialJourney = () => {
                     {p}
                   </p>
                 ))}
+                {section.imageUrl && (
+                  <figure className="my-8 overflow-hidden rounded-2xl border border-border bg-gradient-card">
+                    <img
+                      src={section.imageUrl}
+                      alt={section.imageAlt ?? ""}
+                      className="mx-auto max-h-[36rem] w-full object-contain"
+                    />
+                    {section.imageCaption && (
+                      <figcaption className="border-t border-border px-5 py-4 text-center text-sm text-muted-foreground">
+                        {section.imageCaption}
+                      </figcaption>
+                    )}
+                  </figure>
+                )}
                 {section.callout && (
                   <div className="border-l-4 border-brand-gold bg-brand-gold/5 rounded-r-xl p-6 my-8">
                     <p className="text-lg italic text-foreground/95 leading-relaxed">

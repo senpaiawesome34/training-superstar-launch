@@ -1,9 +1,14 @@
 import marcMenonAsset from "@/assets/marc-menon.jpg.asset.json";
+import marcTrainingRunAsset from "@/assets/marc-training-run.jpg.asset.json";
+import marcIpptResultsAsset from "@/assets/marc-ippt-results.jpg.asset.json";
 
 export type JourneySection = {
   heading?: string;
   paragraphs: string[];
   callout?: string;
+  imageUrl?: string;
+  imageAlt?: string;
+  imageCaption?: string;
 };
 
 export type Journey = {
@@ -48,6 +53,9 @@ export const journeys: Record<string, Journey> = {
           "As fate would have it, a few days later, we bumped into Marc at Serangoon Stadium while finishing our own session. We immediately noticed something off about his training: he was attempting an all-out 2.4km time trial on tired legs and fading heavily before the finish. When we asked what his workout plan was, he simply replied, \"Another 2.4km time trial.\"",
           "We stepped in right away. We had him take a long rest, told him to trust the process, and guided him through a few light strides to end the day.",
         ],
+        imageUrl: marcTrainingRunAsset.url,
+        imageAlt: "Marc's 2.4km training run recorded before his IPPT breakthrough",
+        imageCaption: "A 2.4km training run from the weeks before Marc’s test.",
       },
       {
         heading: "The Build",
@@ -63,6 +71,9 @@ export const journeys: Record<string, Journey> = {
         ],
         callout:
           "Thank you so much guys, it really means a lot. I couldn't have done it without y'all. I opened up my first 400m pretty quick, and by lap 5 I was exhausted and just hung on for dear life. I was so relieved when I saw the board and saw I ran well under 12 minutes. Thank you so, so much!",
+        imageUrl: marcIpptResultsAsset.url,
+        imageAlt: "Marc's IPPT results showing 38 sit-ups, 24 push-ups and an 11 minute 38 second 2.4km run",
+        imageCaption: "The result: 38 sit-ups, 24 push-ups and an 11:38 2.4km run — 67 points and a pass.",
       },
     ],
     closing:
