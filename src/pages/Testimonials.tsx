@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import { Star, Quote, ArrowLeft } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import marcPhoto from "@/assets/marc-menon.jpg.asset.json";
 
 const slugify = (name: string) =>
   name
@@ -16,6 +17,7 @@ type Testimonial = {
   content: string;
   rating: number;
   journey?: string;
+  photoUrl?: string;
 };
 
 const testimonials: Testimonial[] = [
@@ -32,6 +34,7 @@ const testimonials: Testimonial[] = [
     content:
       "Massive shout out to TSA for bringing my 2.4km run from 14+ mins to 11.5 mins over the course of a month, and it helped me pass my pre-enlistee IPPT for the first time! Could not have done it without their structured training programs and persistent motivation. Money very well spent!",
     rating: 5,
+    photoUrl: marcPhoto.url,
     journey: "marc-menon",
   },
   {
@@ -101,9 +104,17 @@ const TestimonialsPage = () => {
                 key={testimonial.name}
                 className="relative bg-gradient-card rounded-2xl p-8 border border-border hover:border-primary/30 transition-all duration-300"
               >
-                <div className="absolute top-6 right-6 opacity-10">
-                  <Quote className="w-12 h-12 text-primary" />
-                </div>
+                {testimonial.photoUrl ? (
+                  <img
+                    src={testimonial.photoUrl}
+                    alt={testimonial.name}
+                    className="absolute top-2 right-2 w-16 h-16 rounded-full object-cover object-center border-2 border-primary/40 shadow-glow"
+                  />
+                ) : (
+                  <div className="absolute top-6 right-6 opacity-10">
+                    <Quote className="w-12 h-12 text-primary" />
+                  </div>
+                )}
                 <div className="flex gap-1 mb-6">
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <Star
