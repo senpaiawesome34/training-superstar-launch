@@ -19,6 +19,7 @@ type Testimonial = {
   rating: number;
   journey?: string;
   photoUrl?: string;
+  photoPosition?: string;
 };
 
 const testimonials: Testimonial[] = [
@@ -59,6 +60,7 @@ const testimonials: Testimonial[] = [
       "The training sessions let me micro manage my running form and allowed me to push my mental to my limits during the workouts. TSA is ultra observant and is able to fine tune me to be as efficient as possible and that helped me every aspect of my running. The workouts are also perfectly catered to improve the anaerobic and aerobic fitness of the 2.4km",
     rating: 5,
     photoUrl: enzoPhoto.url,
+    photoPosition: "50% 20%",
     journey: "enzo-lim",
   },
 
@@ -127,6 +129,11 @@ const TestimonialsPage = () => {
                       src={testimonial.photoUrl}
                       alt={testimonial.name}
                       className="w-[4.5rem] h-[4.5rem] rounded-full object-cover object-center border-2 border-primary/40 shadow-glow flex-shrink-0"
+                      style={
+                        testimonial.photoPosition
+                          ? { objectPosition: testimonial.photoPosition }
+                          : undefined
+                      }
                     />
                   ) : (
                     <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
