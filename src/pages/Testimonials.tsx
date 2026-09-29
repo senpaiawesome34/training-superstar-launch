@@ -4,6 +4,7 @@ import { Star, Quote, ArrowLeft } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import marcPhoto from "@/assets/marc-menon.jpg.asset.json";
+import enzoPhoto from "@/assets/enzo-lim.jpg.asset.json";
 
 const slugify = (name: string) =>
   name
@@ -57,6 +58,8 @@ const testimonials: Testimonial[] = [
     content:
       "The training sessions let me micro manage my running form and allowed me to push my mental to my limits during the workouts. TSA is ultra observant and is able to fine tune me to be as efficient as possible and that helped me every aspect of my running. The workouts are also perfectly catered to improve the anaerobic and aerobic fitness of the 2.4km",
     rating: 5,
+    photoUrl: enzoPhoto.url,
+    journey: "enzo-lim",
   },
 
   {

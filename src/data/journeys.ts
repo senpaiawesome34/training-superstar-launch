@@ -1,6 +1,9 @@
 import marcMenonAsset from "@/assets/marc-menon.jpg.asset.json";
 import marcTrainingRunAsset from "@/assets/marc-training-run.jpg.asset.json";
 import marcIpptResultsAsset from "@/assets/marc-ippt-results.jpg.asset.json";
+import enzoLimAsset from "@/assets/enzo-lim.jpg.asset.json";
+import enzoAwardsAsset from "@/assets/enzo-awards.jpg.asset.json";
+import enzoIpptResultAsset from "@/assets/enzo-ippt-result.jpg.asset.json";
 
 export type JourneySection = {
   heading?: string;
@@ -78,5 +81,66 @@ export const journeys: Record<string, Journey> = {
     ],
     closing:
       "Marc's breakthrough was the spark that ignited the foundation of Training Superstar Academy. Outstanding effort, Marc — wishing you all the best for the rest of your NS and beyond!",
+  },
+  "enzo-lim": {
+    slug: "enzo-lim",
+    name: "Enzo Lim",
+    role: "NSF, 19",
+    photoUrl: enzoLimAsset.url,
+    photoAlt: "Enzo Lim in uniform, saluting after completing Specialist Cadet School",
+    quote:
+      "The training sessions let me micro manage my running form and allowed me to push my mental to my limits during the workouts. TSA is ultra observant and is able to fine tune me to be as efficient as possible and that helped me every aspect of my running. The workouts are also perfectly catered to improve the anaerobic and aerobic fitness of the 2.4km",
+    stats: [
+      { value: "8:51 → 8:13", label: "2.4km timing" },
+      { value: "100 / 100", label: "IPPT score" },
+      { value: "3 weeks", label: "To his first perfect score" },
+      { value: "2 awards", label: "SCS honours earned" },
+    ],
+    sections: [
+      {
+        heading: "A Chance Meeting",
+        paragraphs: [
+          "We first ran into Enzo by chance in March 2026, during a ride home on the East-West MRT Line. He was then still a cadet who had just booked out from his first week of Specialist Cadet School (SCS). Among the small group of soldiers he was with, Enzo stood out instantly through his infectious energy and relentless enthusiasm, and we quickly struck a chord from the get-go.",
+          "It became apparent that this was an encounter with someone unique — a cut above the rest — who brought instant value to the current training squad. Likewise, Enzo realised that we were the missing piece in the puzzle to achieving his NS goals. As the saying goes, the rest is history.",
+        ],
+      },
+      {
+        heading: "A Clear Ambition",
+        paragraphs: [
+          "Enzo had been living in the USA for most of his life and had only recently returned to Singapore to complete his National Service due to his Singapore citizenship. He was searching for a local training group, as the move left him out of shape and unacclimatised to the tropical heat and humidity. His best BMT IPPT 2.4km timing was 8:51 — a far cry from his true potential.",
+          "The then-95-pointer made his intentions clear: become the fittest soldier in his SCS intake, score 100 points for IPPT, and go beyond. His base was already there from years of experience across multiple sports, but through TSA, he became even stronger and took his game to a whole new level.",
+          "Enzo was instantly set on getting fitter, showing up for a TSA session the very next day. This displayed the exemplary attitude and character he naturally embodied, truly demonstrating the ethos of a Training Superstar. From the get-go, his intention was clear: be the best soldier in the whole of SCS and smash the 8:30 mark for the 2.4km run. He wasted no time showing his intent and went on to smash every target.",
+        ],
+      },
+      {
+        heading: "The Elite Training Group",
+        paragraphs: [
+          "As one of our high-level athletes, Enzo joined the Elite Training Group and trained alongside national-level partners, including some of the best distance runners in the nation.",
+          "He also received extensive form analysis and gait refinement from our meticulous coaches. The tailored workouts helped him boost his fitness tremendously as he pushed further than ever before. This sharpened him specifically for the IPPTs during the SCS Foundation Term, with our coaches planning a meticulously timed peak.",
+        ],
+      },
+      {
+        heading: "Top of His Cohort",
+        paragraphs: [
+          "Enzo completed SCS with two major awards: the SCS Foundation Term School Best, earned by finishing as the top cadet in his entire cohort, and the Best in Physical Training (PT) award.",
+        ],
+        imageUrl: enzoAwardsAsset.url,
+        imageAlt: "Enzo's SCS School Best and Best in Physical Training award plaques",
+        imageCaption: "Two major SCS honours: Foundation Term School Best and Best in Physical Training.",
+      },
+      {
+        heading: "A Perfect 100",
+        paragraphs: [
+          "Enzo earned an unbeatable maximum score of 100/100 for IPPT on his first try in April — just three weeks after joining TSA. He smashed the 8:30 2.4km barrier by a massive 17 seconds, clocking 8:13 alongside 60 sit-ups and 68 push-ups.",
+        ],
+        callout:
+          "Definitely many things to learn with every passing day and experience!!",
+        imageUrl: enzoIpptResultAsset.url,
+        imageAlt: "Enzo's IPPT result showing 60 sit-ups, 68 push-ups, an 8 minute 13 second 2.4km run and 100 total points",
+        imageCaption: "The perfect score: 60 sit-ups, 68 push-ups and an 8:13 2.4km run — 100 points and Gold.",
+      },
+    ],
+    closing:
+      "Enzo, we are hugely glad and honoured to have been part of your journey. Massive congratulations on becoming TSA's first Coached — not Poached — 100-pointer. We wish you nothing but the best as you move forward as a Commander of the SAF!",
   },
 };
