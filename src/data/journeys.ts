@@ -141,6 +141,6 @@ export const journeys: Record<string, Journey> = {
       },
     ],
     closing:
-      "Enzo, we are hugely glad and honoured to have been part of your journey. Massive congratulations on becoming TSA's first Coached — not Poached — 100-pointer. We wish you nothing but the best as you move forward as a Commander of the SAF!",
+      "He expressed his humility and gratitude even after achieving his goal of being the fittest soldier in his batch by a country mile. Enzo, we are hugely glad and honoured to have been part of your journey. Massive congratulations on becoming TSA's first Coached — not Poached — 100-pointer. We wish you nothing but the best as you move forward as a Commander of the SAF!",
   },
 };
