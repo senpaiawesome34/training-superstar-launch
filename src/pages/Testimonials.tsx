@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import marcPhoto from "@/assets/marc-menon.jpg.asset.json";
 import enzoPhoto from "@/assets/enzo-lim.jpg.asset.json";
+import songPhoto from "@/assets/songQuekAsset.jpeg";
 
 const slugify = (name: string) =>
   name
