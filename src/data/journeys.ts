@@ -1,9 +1,17 @@
+// marc's photos
 import marcMenonAsset from "@/assets/marc-menon.jpg.asset.json";
 import marcTrainingRunAsset from "@/assets/marc-training-run.jpg.asset.json";
 import marcIpptResultsAsset from "@/assets/marc-ippt-results.jpg.asset.json";
+
+// enzo's photos
 import enzoLimAsset from "@/assets/enzo-lim.jpg.asset.json";
 import enzoAwardsAsset from "@/assets/enzo-awards.jpg.asset.json";
 import enzoIpptResultAsset from "@/assets/enzo-ippt-result.jpg.asset.json";
+
+// song quek's photos
+import songQuekAsset from "@/assets/song-quek.jpg";
+// import songTrainingAsset from "@/assets/song-training.jpg";
+import songResultAsset from "@/assets/song-result.jpg";
 
 export type JourneySection = {
   heading?: string;
@@ -27,6 +35,7 @@ export type Journey = {
 };
 
 export const journeys: Record<string, Journey> = {
+  // marc's writeup
   "marc-menon": {
     slug: "marc-menon",
     name: "Marc Menon",
@@ -82,6 +91,8 @@ export const journeys: Record<string, Journey> = {
     closing:
       "Marc's breakthrough was the spark that ignited the foundation of Training Superstar Academy. Outstanding effort, Marc — wishing you all the best for the rest of your NS and beyond!",
   },
+
+  // enzo's writeup
   "enzo-lim": {
     slug: "enzo-lim",
     name: "Enzo Lim",
@@ -142,5 +153,66 @@ export const journeys: Record<string, Journey> = {
     ],
     closing:
       "He expressed his humility and gratitude even after achieving his goal of being the fittest soldier in his batch by a country mile. Enzo, we are hugely glad and honoured to have been part of your journey. Massive congratulations on becoming TSA's first Coached — not Poached — 100-pointer. We wish you nothing but the best as you move forward as a Commander of the SAF!",
+  },
+
+  // song quek's writeup
+  "song-quek": {
+    slug: "song-quek",
+    name: "Song Quek",
+    role: "NSF, 21",
+    photoUrl: songQuekAsset,
+    photoAlt: "Song Quek at the track",
+    quote:
+      "I was a sub 9min 2.4km runner and trained for quite long to achieve it. However, my IPPT was in the next week and I needed to hit a sub 8min 30s. It felt impossible to me until I met TSA. Within that short week, I was given a personalized schedule tailored to helping me cut down to the timing required. During training, the coach helped me to correct minute details such as my running form and my pacing which miraculously shaved my timing down to 8min and 25s on the day of my IPPT. TSA is very professional and easy to work with, 100% would recommend.",
+    stats: [
+      { value: "< 9:00 → 8:25", label: "2.4km timing" },
+      { value: "100 / 100", label: "IPPT score" },
+      { value: "1 week", label: "Training duration" },
+      { value: "100-Pointer Plaque", label: "NS Unit Honour" },
+    ],
+    sections: [
+      {
+        heading: "A Chance Meeting at Serangoon Stadium",
+        paragraphs: [
+          "Song Quek approached TSA out of the blue, during a totally random encounter at Serangoon stadium. He was just over 1 week away from his upcoming IPPT, and desperately needed to smash the 8.30 barrier in order to achieve the maximum score of 100 Pts. He had been trying to reach the elusive mark for multiple attempts at this point, all of which fell agonisingly short. He was easily able to hit the maximum score for the static push up and sit up exercises, being from a combat sports background. However, while he was able to dip under 9 minutes for the 2.4km run; that 8.30 mark just seemed like a Step Too Far… until he met TSA.",
+          "As his ORD date neared in less than a month away; the upcoming trial was his last realistic shot at reaching his goal. His NS unit offered some real recognition to servicemen who achieved this rare feat; honoring this Hallowed Group of 100-Pointers by Inscribing their Names onto a Plaque, to be prominently displayed as a measure of greatness to Future Generations passing through.\nSong Quek explained all of this to me during our initial exchange, at a slight loss on what to do.\nRegardless, we decided to Take a Bet on Him.",
+        ],
+      },
+      {
+        heading: "An Accelerated One-Week Build",
+        paragraphs: [
+          "Seeking some advice on pacing, he was just about to run another 2.4km time trial on his own. Instead, after establishing his current baseline, I agreed to take him under my wing.",
+          "Adopting an accelerated version of our proprietary in-house Clutch Up program; I quickly established the routine for the crucial Week Ahead. Having to work around his NS commitments was a unique challenge, but not one we are unfamiliar with. What’s more, Song Quek literally had to head to Pulau Tekong the very next day, for a training exercise. I would not have the chance to conduct a specific session with him until 2 days later.",
+        ],
+      },
+      {
+        heading: "Improvising on the Fly",
+        paragraphs: [
+          "Nonetheless, Song Quek diligently followed the advice of his coach, even executing workouts on his own in the mornings when he couldn’t be physically present at training himself. A memorable session we conducted at Yio Chu Kang stadium threw an unexpected hurdle during the workout; where lanes 1-3 were blocked off due to another running club having priority access to the facility. On the fly, we improvised the workout, extrapolating the now 430 metres per lap track from lane 4 and emphasising the objective of even splitting and rhythm in order to achieve the desired lap split. Conducting an all in one crash course of sorts; we touched on numerous key aspects to achieving his goal time during the training session; all of which Song Quek soaked in thoroughly, while smashing a fantastically executed workout. Working on his pacing, cadence and sharpening his finishing speed; Song Quek ended the week in Tip Top shape, right in time for his IPPT.",
+        ],
+        // imageUrl: songTrainingAsset,
+        // imageAlt: "Song Quek during interval training",
+        // imageCaption: "Pacing and cadence work during the accelerated crash course.",
+      },
+      {
+        heading: "D-Day: One Last Shot at Glory",
+        paragraphs: [
+          "Then came the D-day, One Last Shot at Glory, a day where Nothing Less than Perfection would suffice. I woke up to a series of jubilant messages from Song Quek, who had not just achieved his feat of a Perfect 100 Points but also Smashed his 2.4km Run Personal Best timing, clocking in at a blistering 8mins 25 seconds, which was comfortably under the target mark of 8.30. What made this achievement even more impressive, was that Song Quek did not even do his run on a typical running track, as one would expect; he had to make do with several laps around an underground carpark, and thus couldn’t rely on typical methods of pace setting. Despite all this, he executed our discussed plan Down to a Tee, and as a result had a Phenomenal Performance on that day.",
+        ],
+        callout:
+          "“The pacing strategy from the get go and the final sprint helped me tremendously in hitting this timing!”",
+        imageUrl: songResultAsset,
+        imageAlt: "Song Quek's 100 Points IPPT result",
+        imageCaption: "A blistering 8:25 2.4km run in an underground carpark to secure 100 points.",
+      },
+      {
+        heading: "The Final Piece of the Puzzle",
+        paragraphs: [
+          "Song Quek is living proof that with the right mindset and attitude, pre-breakthrough energy is stored, and just waiting to be unlocked. It was merely a matter of points before an athlete like himself would reach his 100 points; but sometimes, what is Missing is that Final Piece in the Puzzle.",
+        ],
+      },
+    ],
+    closing:
+      "Song Quek brought his A-Game both to Training and when it came to the Crunch, hugely leveling up in terms of his mentality & pacing with TSA. He deserves huge credit for stepping up to the occasion - no less in his final IPPT as an NSF - and walks away with his name Marked in History, inscribed on a plaque indefinitely to serve as a Source of Inspiration to future generations! Well done Song Quek, and all the best in your post-ORD endeavours!",
   },
 };
