@@ -2,13 +2,20 @@ import { Star, Quote } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import marcPhoto from "@/assets/marc-menon.jpg.asset.json";
+import enzoPhoto from "@/assets/enzo-lim.jpg.asset.json";
+import songPhoto from "@/assets/songQuekAsset.jpeg";
+
 
 const testimonials = [
   {
-    name: "S Y Chu",
-    role: "NSman, 23",
-    content: "I went from doubting myself to running a sub-10 minute 2.4km with only 3 weeks of proper training. TSA knew exactly how to push me while keeping training realistic and effective. Couldn't have done this without their guidance.",
-    rating: 5,
+    name: "Enzo Lim",
+        role: "NSF, 19",
+        content:
+          "The training sessions let me micro manage my running form and allowed me to push my mental to my limits during the workouts. TSA is ultra observant and is able to fine tune me to be as efficient as possible and that helped me every aspect of my running. The workouts are also perfectly catered to improve the anaerobic and aerobic fitness of the 2.4km",
+        rating: 5,
+        photoUrl: enzoPhoto.url,
+        photoPosition: "50% 20%",
+        journey: "enzo-lim",
   },
   {
     name: "Marc Menon",
@@ -19,10 +26,13 @@ const testimonials = [
     journey: "marc-menon",
   },
   {
-    name: "Jared Goh",
-    role: "Undergraduate, 21",
-    content: "TSA has been instrumental in guiding me throughout my weight loss and fitness journey. After being largely sedentary for my 2 years in NS, working with TSA has kickstarted a much healthier and active lifestyle. I am now a confident runner with an athletic physique!",
+    name: "Song Quek",
+    role: "NSF, 22",
+    content:
+      "I was a sub 9min 2.4km runner and trained for quite long to achieve it. However, my IPPT was in the next week and I needed to hit a sub 8min 30s. It felt impossible to me until I met TSA. Within that short week, I was given a personalized schedule tailored to helping me cut down to the timing required. During training, I corrected minute details such as my running form and my pacing which miraculously shaved my timing down to 8min 25s on the day of my IPPT. TSA is very professional and easy to work with, 100% would recommend.",
     rating: 5,
+    photoUrl: songPhoto,
+    journey: "song-quek",
   },
 ];
 
