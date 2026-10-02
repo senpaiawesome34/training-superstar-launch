@@ -159,20 +159,20 @@ export const journeys: Record<string, Journey> = {
   "song-quek": {
     slug: "song-quek",
     name: "Song Quek",
-    role: "NSF, 21",
+    role: "NSF, 22",
     photoUrl: songQuekAsset,
     photoAlt: "Song Quek at the track",
     quote:
       "I was a sub 9min 2.4km runner and trained for quite long to achieve it. However, my IPPT was in the next week and I needed to hit a sub 8min 30s. It felt impossible to me until I met TSA. Within that short week, I was given a personalized schedule tailored to helping me cut down to the timing required. During training, the coach helped me to correct minute details such as my running form and my pacing which miraculously shaved my timing down to 8min and 25s on the day of my IPPT. TSA is very professional and easy to work with, 100% would recommend.",
     stats: [
-      { value: "< 9:00 → 8:25", label: "2.4km timing" },
+      { value: "8:59 → 8:25", label: "2.4km timing" },
       { value: "100 / 100", label: "IPPT score" },
       { value: "1 week", label: "Training duration" },
       { value: "100-Pointer Plaque", label: "NS Unit Honour" },
     ],
     sections: [
       {
-        heading: "A Chance Meeting at Serangoon Stadium",
+        heading: "Another Chance Meeting at Serangoon Stadium",
         paragraphs: [
           "Song Quek approached TSA out of the blue, during a totally random encounter at Serangoon stadium. He was just over 1 week away from his upcoming IPPT, and desperately needed to smash the 8.30 barrier in order to achieve the maximum score of 100 Pts. He had been trying to reach the elusive mark for multiple attempts at this point, all of which fell agonisingly short. He was easily able to hit the maximum score for the static push up and sit up exercises, being from a combat sports background. However, while he was able to dip under 9 minutes for the 2.4km run; that 8.30 mark just seemed like a Step Too Far… until he met TSA.",
           "As his ORD date neared in less than a month away; the upcoming trial was his last realistic shot at reaching his goal. His NS unit offered some real recognition to servicemen who achieved this rare feat; honoring this Hallowed Group of 100-Pointers by Inscribing their Names onto a Plaque, to be prominently displayed as a measure of greatness to Future Generations passing through.\nSong Quek explained all of this to me during our initial exchange, at a slight loss on what to do.\nRegardless, we decided to Take a Bet on Him.",
