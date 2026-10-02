@@ -69,7 +69,7 @@ const testimonials: Testimonial[] = [
     name: "Song Quek",
     role: "NSF, 22",
     content:
-      "I was a sub 9min 2.4km runner and trained for quite long to achieve it. However, my IPPT was in the next week and I needed to hit a sub 8min 30s. It felt impossible to me until I met TSA. Within that short week, I was given a personalized schedule tailored to helping me cut down to the timing required. During training, I corrected minute details such as my running form and my pacing which miraculously shaved my timing down to 8min 29s on the day of my IPPT. TSA is very professional and easy to work with, 100% would recommend.",
+      "I was a sub 9min 2.4km runner and trained for quite long to achieve it. However, my IPPT was in the next week and I needed to hit a sub 8min 30s. It felt impossible to me until I met TSA. Within that short week, I was given a personalized schedule tailored to helping me cut down to the timing required. During training, I corrected minute details such as my running form and my pacing which miraculously shaved my timing down to 8min 25s on the day of my IPPT. TSA is very professional and easy to work with, 100% would recommend.",
     rating: 5,
     photoUrl: songPhoto,
     journey: "song-quek",
