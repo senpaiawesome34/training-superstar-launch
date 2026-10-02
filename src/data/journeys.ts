@@ -188,7 +188,7 @@ export const journeys: Record<string, Journey> = {
       {
         heading: "Improvising on the Fly",
         paragraphs: [
-          "Nonetheless, Song Quek diligently followed the advice of his coach, even executing workouts on his own in the mornings when he couldn’t be physically present at training himself. A memorable session we conducted at Yio Chu Kang stadium threw an unexpected hurdle during the workout; where lanes 1-3 were blocked off due to another running club having priority access to the facility. On the fly, we improvised the workout, extrapolating the now 430 metres per lap track from lane 4 and emphasising the objective of even splitting and rhythm in order to achieve the desired lap split. Conducting an all in one crash course of sorts; we touched on numerous key aspects to achieving his goal time during the training session; all of which Song Quek soaked in thoroughly, while smashing a fantastically executed workout. Working on his pacing, cadence and sharpening his finishing speed; Song Quek ended the week in Tip Top shape, right in time for his IPPT.",
+          "Nonetheless, Song Quek diligently followed the advice of his coach, even executing runs on his own in the mornings when he couldn’t be physically present at training himself. A memorable session we conducted at Yio Chu Kang stadium threw an unexpected hurdle during the workout; where lanes 1-3 were blocked off due to another running club having priority access to the facility. On the fly, we improvised the workout, extrapolating the now 430 metres per lap track from lane 4 and emphasising the objective of even splitting and rhythm in order to achieve the desired lap split. Conducting an all in one crash course of sorts; we touched on numerous key aspects to achieving his goal time during the training session; all of which Song Quek soaked in thoroughly, while smashing a fantastically executed workout. Working on his pacing, cadence and sharpening his finishing speed; Song Quek ended the week in Tip Top shape, right in time for his IPPT.",
         ],
         // imageUrl: songTrainingAsset,
         // imageAlt: "Song Quek during interval training",
@@ -208,7 +208,7 @@ export const journeys: Record<string, Journey> = {
       {
         heading: "The Final Piece of the Puzzle",
         paragraphs: [
-          "Song Quek is living proof that with the right mindset and attitude, pre-breakthrough energy is stored, and just waiting to be unlocked. It was merely a matter of points before an athlete like himself would reach his 100 points; but sometimes, what is Missing is that Final Piece in the Puzzle.",
+          "Song Quek is living proof that with the right mindset and attitude, pre-breakthrough energy is stored, and just waiting to be unlocked. It was merely a matter of time before an athlete like himself would reach his 100 points; but sometimes, what is Missing is that Final Piece in the Puzzle.",
         ],
       },
     ],
