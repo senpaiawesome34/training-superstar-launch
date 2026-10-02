@@ -9,9 +9,9 @@ import enzoAwardsAsset from "@/assets/enzo-awards.jpg.asset.json";
 import enzoIpptResultAsset from "@/assets/enzo-ippt-result.jpg.asset.json";
 
 // song quek's photos
-import songQuekAsset from "@/assets/song-quek.jpg";
+import songQuekAsset from "@/assets/songQuekAsset.jpeg";
 // import songTrainingAsset from "@/assets/song-training.jpg";
-import songResultAsset from "@/assets/song-result.jpg";
+import songResultAsset from "@/assets/songResultAsset.jpeg";
 
 export type JourneySection = {
   heading?: string;
