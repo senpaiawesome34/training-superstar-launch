@@ -28,6 +28,14 @@ const programs = [
     icon: Users,
     features: ["Weekend sessions", "Track workouts", "Peer motivation", "Coach guidance"],
     popular: false,
+  },
+  {
+    title: "8 Weeks to Peak",
+    description: "Special BYD Singapore International Marathon Clutch Up Program. Available every October–November only.",
+    duration: "8 weeks",
+    icon: CalendarDays,
+    features: ["Marathon-specific build", "Race-day pacing", "Peak-week tapering", "Seasonal intake"],
+    popular: false,
     link: "/8-weeks-to-peak",
   },
 ];
