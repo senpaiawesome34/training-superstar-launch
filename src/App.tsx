@@ -8,6 +8,7 @@ import Index from "./pages/Index";
 import PaymentSuccess from "./pages/PaymentSuccess";
 import IPPTPrep from "./pages/IPPTPrep";
 import SpeedFundamentals from "./pages/SpeedFundamentals";
+import EightWeeksToPeak from "./pages/EightWeeksToPeak";
 import TestimonialsPage from "./pages/Testimonials";
 import TestimonialJourney from "./pages/TestimonialJourney";
 import Shop from "./pages/Shop";
