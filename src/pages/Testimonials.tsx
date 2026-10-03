@@ -25,13 +25,6 @@ type Testimonial = {
 
 const testimonials: Testimonial[] = [
   {
-    name: "S Y Chu",
-    role: "NSman, 23",
-    content:
-      "I went from doubting myself to running a sub-10 minute 2.4km with only 3 weeks of proper training. TSA knew exactly how to push me while keeping training realistic and effective. Couldn't have done this without their guidance.",
-    rating: 5,
-  },
-  {
     name: "Marc Menon",
     role: "Pre-Enlistee, 19",
     content:
@@ -39,6 +32,32 @@ const testimonials: Testimonial[] = [
     rating: 5,
     photoUrl: marcPhoto.url,
     journey: "marc-menon",
+  },
+  {
+    name: "Enzo Lim",
+    role: "NSF, 19",
+    content:
+      "The training sessions let me micro manage my running form and allowed me to push my mental to my limits during the workouts. TSA is ultra observant and is able to fine tune me to be as efficient as possible and that helped me every aspect of my running. The workouts are also perfectly catered to improve the anaerobic and aerobic fitness of the 2.4km",
+    rating: 5,
+    photoUrl: enzoPhoto.url,
+    photoPosition: "50% 20%",
+    journey: "enzo-lim",
+  },
+  {
+    name: "Song Quek",
+    role: "NSF, 22",
+    content:
+      "I was a sub 9min 2.4km runner and trained for quite long to achieve it. However, my IPPT was in the next week and I needed to hit a sub 8min 30s. It felt impossible to me until I met TSA. Within that short week, I was given a personalized schedule tailored to helping me cut down to the timing required. During training, I corrected minute details such as my running form and my pacing which miraculously shaved my timing down to 8min 25s on the day of my IPPT. TSA is very professional and easy to work with, 100% would recommend.",
+    rating: 5,
+    photoUrl: songPhoto,
+    journey: "song-quek",
+  },
+  {
+    name: "S Y Chu",
+    role: "NSman, 23",
+    content:
+      "I went from doubting myself to running a sub-10 minute 2.4km with only 3 weeks of proper training. TSA knew exactly how to push me while keeping training realistic and effective. Couldn't have done this without their guidance.",
+    rating: 5,
   },
   {
     name: "Jared Goh",
@@ -53,26 +72,6 @@ const testimonials: Testimonial[] = [
     content:
       "TSA is the GOAT. They helped me improve my 2.4km from 11:11 to 9:40 in just 3 weeks — something I genuinely never thought was possible. Thanks to their coaching, I achieved my goal of getting Commando Gold for my IPPT. They clearly know their craft and bring a wealth of experience. Their training plans are detailed, personalised, and effective, and they consistently push and motivate you, even on days when you don't feel like training. I've gained tremendous value from TSA and would 10/10 recommend it to anyone looking to rapidly improve their running. They are also all really chill and easy to befriend :_)",
     rating: 5,
-  },
-  {
-    name: "Enzo Lim",
-    role: "NSF, 19",
-    content:
-      "The training sessions let me micro manage my running form and allowed me to push my mental to my limits during the workouts. TSA is ultra observant and is able to fine tune me to be as efficient as possible and that helped me every aspect of my running. The workouts are also perfectly catered to improve the anaerobic and aerobic fitness of the 2.4km",
-    rating: 5,
-    photoUrl: enzoPhoto.url,
-    photoPosition: "50% 20%",
-    journey: "enzo-lim",
-  },
-
-  {
-    name: "Song Quek",
-    role: "NSF, 22",
-    content:
-      "I was a sub 9min 2.4km runner and trained for quite long to achieve it. However, my IPPT was in the next week and I needed to hit a sub 8min 30s. It felt impossible to me until I met TSA. Within that short week, I was given a personalized schedule tailored to helping me cut down to the timing required. During training, I corrected minute details such as my running form and my pacing which miraculously shaved my timing down to 8min 25s on the day of my IPPT. TSA is very professional and easy to work with, 100% would recommend.",
-    rating: 5,
-    photoUrl: songPhoto,
-    journey: "song-quek",
   },
 ];
 
