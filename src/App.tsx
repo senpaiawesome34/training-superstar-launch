@@ -10,7 +10,6 @@ import IPPTPrep from "./pages/IPPTPrep";
 import SpeedFundamentals from "./pages/SpeedFundamentals";
 import EightWeeksToPeak from "./pages/EightWeeksToPeak";
 import TestimonialsPage from "./pages/Testimonials";
-import TestimonialsPage from "./pages/Testimonials";
 import TestimonialJourney from "./pages/TestimonialJourney";
 import Shop from "./pages/Shop";
 import NotFound from "./pages/NotFound";
