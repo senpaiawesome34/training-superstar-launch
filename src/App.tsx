@@ -8,6 +8,7 @@ import Index from "./pages/Index";
 import PaymentSuccess from "./pages/PaymentSuccess";
 import IPPTPrep from "./pages/IPPTPrep";
 import SpeedFundamentals from "./pages/SpeedFundamentals";
+import EightWeeksToPeak from "./pages/EightWeeksToPeak";
 import TestimonialsPage from "./pages/Testimonials";
 import TestimonialJourney from "./pages/TestimonialJourney";
 import Shop from "./pages/Shop";
@@ -34,6 +35,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/ippt-prep" element={<IPPTPrep />} />
           <Route path="/speed-fundamentals" element={<SpeedFundamentals />} />
+          <Route path="/8-weeks-to-peak" element={<EightWeeksToPeak />} />
           <Route path="/testimonials" element={<TestimonialsPage />} />
           <Route path="/testimonials/:slug" element={<TestimonialJourney />} />
           <Route path="/shop" element={<Shop />} />
