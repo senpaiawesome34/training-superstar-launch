@@ -15,6 +15,7 @@ import songResultAsset from "@/assets/songResultAsset.jpeg";
 
 // shun yuan's photos
 import shunYuanAsset from "@/assets/shun-yuan.png.asset.json";
+import shunyuanResultAsset from "@/assets/shunyuanResultAsset.jpeg"
 
 export type JourneySection = {
   heading?: string;
@@ -263,6 +264,9 @@ export const journeys: Record<string, Journey> = {
         ],
         callout:
           "I just focused on my own game... just zoomed past people like it was nothing. I'm pretty sure 11 mins would've been a struggle had TSA not come in to save me!",
+        imageUrl: shunyuanResultAsset,
+        imageAlt: "Shun Yuan's 89 point (Gold) IPPT result",
+        imageCaption: "From Couch to sub-10 in 3.5 weeks.",
       },
       {
         heading: "Proof the System Travels",
