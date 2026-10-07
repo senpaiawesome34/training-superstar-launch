@@ -263,7 +263,7 @@ export const journeys: Record<string, Journey> = {
           "On January 3, 2026, the disciplined execution paid off in full. Shun Yuan didn't just regain his baseline — he vaulted straight back into his peak Personal Best shape, dropping a blistering 9:54 2.4km and securing an 89-point Gold award.",
         ],
         callout:
-          "I just focused on my own game... just zoomed past people like it was nothing. I'm pretty sure 11 mins would've been a struggle had TSA not come in to save me!",
+          "I just focused on my own game... and zoomed past people like it was nothing. I'm pretty sure 11 mins would've been a struggle had TSA not come in to save me!",
         imageUrl: shunyuanResultAsset,
         imageAlt: "Shun Yuan's 89 point (Gold) IPPT result",
         imageCaption: "From Couch to sub-10 in 3.5 weeks.",
