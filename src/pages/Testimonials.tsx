@@ -131,56 +131,58 @@ const TestimonialsPage = () => {
                 <p className="text-foreground/90 leading-relaxed mb-6">
                   "{testimonial.content}"
                 </p>
-                <div className="flex items-center gap-4">
-                  {testimonial.photoUrl ? (
-                    <img
-                      src={testimonial.photoUrl}
-                      alt={testimonial.name}
-                      className="w-[4.5rem] h-[4.5rem] rounded-full object-cover object-center border-2 border-primary/40 shadow-glow flex-shrink-0"
-                      style={
-                        testimonial.photoPosition
-                          ? { objectPosition: testimonial.photoPosition }
-                          : undefined
-                      }
-                    />
-                  ) : (
-                    <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
-                      <span className="text-primary font-bold text-lg">
-                        {testimonial.name.charAt(0)}
-                      </span>
-                    </div>
-                  )}
-                  <div>
-                    <div className="font-semibold">{testimonial.name}</div>
-                    <div className="text-sm text-muted-foreground">
-                      {testimonial.role}
+                <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-5">
+                  <div className="flex items-center gap-4">
+                    {testimonial.photoUrl ? (
+                      <img
+                        src={testimonial.photoUrl}
+                        alt={testimonial.name}
+                        className="w-[4.5rem] h-[4.5rem] rounded-full object-cover object-center border-2 border-primary/40 shadow-glow flex-shrink-0"
+                        style={
+                          testimonial.photoPosition
+                            ? { objectPosition: testimonial.photoPosition }
+                            : undefined
+                        }
+                      />
+                    ) : (
+                      <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
+                        <span className="text-primary font-bold text-lg">
+                          {testimonial.name.charAt(0)}
+                        </span>
+                      </div>
+                    )}
+                    <div>
+                      <div className="font-semibold">{testimonial.name}</div>
+                      <div className="text-sm text-muted-foreground">
+                        {testimonial.role}
+                      </div>
                     </div>
                   </div>
-                </div>
 
-                {/* Read More */}
-                {testimonial.journey ? (
-                  <Button
-                    variant="outline"
-                    className="mt-6 w-full border-primary/30 hover:bg-primary/10 hover:border-primary/50"
-                    onClick={() => navigate(`/testimonials/${testimonial.journey}`)}
-                  >
-                    Read More
-                  </Button>
-                ) : (
-                  <div className="mt-6">
+                  {/* Read More */}
+                  {testimonial.journey ? (
                     <Button
                       variant="outline"
-                      disabled
-                      className="w-full border-border/50 text-muted-foreground cursor-not-allowed"
+                      className="w-full md:w-auto md:shrink-0 border-primary/30 hover:bg-primary/10 hover:border-primary/50"
+                      onClick={() => navigate(`/testimonials/${testimonial.journey}`)}
                     >
                       Read More
                     </Button>
-                    <p className="text-xs text-muted-foreground text-center mt-2">
-                      Full journey coming soon
-                    </p>
-                  </div>
-                )}
+                  ) : (
+                    <div className="w-full md:w-auto md:shrink-0">
+                      <Button
+                        variant="outline"
+                        disabled
+                        className="w-full md:w-auto border-border/50 text-muted-foreground cursor-not-allowed"
+                      >
+                        Read More
+                      </Button>
+                      <p className="text-xs text-muted-foreground text-center mt-2">
+                        Full journey coming soon
+                      </p>
+                    </div>
+                  )}
+                </div>
               </div>
             ))}
           </div>

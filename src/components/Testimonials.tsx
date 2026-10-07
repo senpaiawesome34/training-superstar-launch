@@ -55,7 +55,7 @@ const Testimonials = () => {
         </div>
 
         {/* Testimonial Cards */}
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
             <div
               key={testimonial.name}
@@ -81,31 +81,34 @@ const Testimonials = () => {
                 "{testimonial.content}"
               </p>
 
-              {/* Author */}
-              <div className="flex items-center gap-4">
-                {testimonial.photoUrl ? (
-                  <img
-                    src={testimonial.photoUrl}
-                    alt={testimonial.name}
-                    className="w-[4.5rem] h-[4.5rem] rounded-full object-cover object-center border-2 border-primary/40 shadow-glow flex-shrink-0"
-                  />
-                ) : (
-                  <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
-                    <span className="text-primary font-bold text-lg">
-                      {testimonial.name.charAt(0)}
-                    </span>
-                  </div>
-                )}
-                <div>
-                  <div className="font-semibold">{testimonial.name}</div>
-                  <div className="text-sm text-muted-foreground">
-                    {testimonial.role}
+              {/* Author + Read More */}
+              <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                <div className="flex items-center gap-4">
+                  {testimonial.photoUrl ? (
+                    <img
+                      src={testimonial.photoUrl}
+                      alt={testimonial.name}
+                      className="w-[4.5rem] h-[4.5rem] rounded-full object-cover object-center border-2 border-primary/40 shadow-glow flex-shrink-0"
+                    />
+                  ) : (
+                    <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
+                      <span className="text-primary font-bold text-lg">
+                        {testimonial.name.charAt(0)}
+                      </span>
+                    </div>
+                  )}
+                  <div>
+                    <div className="font-semibold">{testimonial.name}</div>
+                    <div className="text-sm text-muted-foreground">
+                      {testimonial.role}
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              {/* Read More */}
-              {testimonial.journey && <ReadMoreButton journey={testimonial.journey} />}
+                {testimonial.journey && (
+                  <ReadMoreButton journey={testimonial.journey} />
+                )}
+              </div>
             </div>
           ))}
         </div>
@@ -126,7 +129,7 @@ const ReadMoreButton = ({ journey }: { journey: string }) => {
       variant="outline"
       size="sm"
       onClick={() => navigate(`/testimonials/${journey}`)}
-      className="mt-6 w-full border-primary/30 hover:bg-primary/10 hover:border-primary/50"
+      className="w-full md:w-auto md:shrink-0 border-primary/30 hover:bg-primary/10 hover:border-primary/50"
     >
       Read More
     </Button>
