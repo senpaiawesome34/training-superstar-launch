@@ -55,11 +55,11 @@ const Testimonials = () => {
         </div>
 
         {/* Testimonial Cards */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
             <div
               key={testimonial.name}
-              className="relative bg-gradient-card rounded-2xl p-8 border border-border hover:border-primary/30 transition-all duration-300"
+              className="relative flex flex-col bg-gradient-card rounded-2xl p-8 border border-border hover:border-primary/30 transition-all duration-300"
             >
               {/* Quote Icon */}
               <div className="absolute top-6 right-6 opacity-10">
@@ -81,8 +81,8 @@ const Testimonials = () => {
                 "{testimonial.content}"
               </p>
 
-              {/* Author + Read More */}
-              <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+              {/* Author + Read More — pinned to the bottom so every card lines up */}
+              <div className="mt-auto">
                 <div className="flex items-center gap-4">
                   {testimonial.photoUrl ? (
                     <img
@@ -105,9 +105,7 @@ const Testimonials = () => {
                   </div>
                 </div>
 
-                {testimonial.journey && (
-                  <ReadMoreButton journey={testimonial.journey} />
-                )}
+                {testimonial.journey && <ReadMoreButton journey={testimonial.journey} />}
               </div>
             </div>
           ))}
@@ -129,7 +127,7 @@ const ReadMoreButton = ({ journey }: { journey: string }) => {
       variant="outline"
       size="sm"
       onClick={() => navigate(`/testimonials/${journey}`)}
-      className="w-full md:w-auto md:shrink-0 border-primary/30 hover:bg-primary/10 hover:border-primary/50"
+      className="mt-6 w-full border-primary/30 hover:bg-primary/10 hover:border-primary/50"
     >
       Read More
     </Button>

@@ -115,7 +115,7 @@ const TestimonialsPage = () => {
             {testimonials.map((testimonial) => (
               <div
                 key={testimonial.name}
-                className="relative bg-gradient-card rounded-2xl p-8 border border-border hover:border-primary/30 transition-all duration-300"
+                className="relative flex flex-col bg-gradient-card rounded-2xl p-8 border border-border hover:border-primary/30 transition-all duration-300"
               >
                 <div className="absolute top-6 right-6 opacity-10">
                   <Quote className="w-12 h-12 text-primary" />
@@ -131,7 +131,8 @@ const TestimonialsPage = () => {
                 <p className="text-foreground/90 leading-relaxed mb-6">
                   "{testimonial.content}"
                 </p>
-                <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-5">
+                {/* Author + Read More — pinned to the bottom so every card lines up */}
+                <div className="mt-auto">
                   <div className="flex items-center gap-4">
                     {testimonial.photoUrl ? (
                       <img
@@ -163,25 +164,27 @@ const TestimonialsPage = () => {
                   {testimonial.journey ? (
                     <Button
                       variant="outline"
-                      className="w-full md:w-auto md:shrink-0 border-primary/30 hover:bg-primary/10 hover:border-primary/50"
+                      className="mt-6 w-full border-primary/30 hover:bg-primary/10 hover:border-primary/50"
                       onClick={() => navigate(`/testimonials/${testimonial.journey}`)}
                     >
                       Read More
                     </Button>
                   ) : (
-                    <div className="w-full md:w-auto md:shrink-0">
-                      <Button
-                        variant="outline"
-                        disabled
-                        className="w-full md:w-auto border-border/50 text-muted-foreground cursor-not-allowed"
-                      >
-                        Read More
-                      </Button>
-                      <p className="text-xs text-muted-foreground text-center mt-2">
-                        Full journey coming soon
-                      </p>
-                    </div>
+                    <Button
+                      variant="outline"
+                      disabled
+                      className="mt-6 w-full border-border/50 text-muted-foreground cursor-not-allowed"
+                    >
+                      Read More
+                    </Button>
                   )}
+                  {/* keeps the button at the same height on every card */}
+                  <p
+                    className="text-xs text-muted-foreground text-center mt-2"
+                    aria-hidden={!!testimonial.journey}
+                  >
+                    {testimonial.journey ? "\u00A0" : "Full journey coming soon"}
+                  </p>
                 </div>
               </div>
             ))}
