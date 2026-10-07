@@ -13,6 +13,9 @@ import songQuekAsset from "@/assets/songQuekAsset.jpeg";
 // import songTrainingAsset from "@/assets/song-training.jpg";
 import songResultAsset from "@/assets/songResultAsset.jpeg";
 
+// shun yuan's photos
+import shunYuanAsset from "@/assets/shun-yuan.png.asset.json";
+
 export type JourneySection = {
   heading?: string;
   paragraphs: string[];
@@ -214,5 +217,61 @@ export const journeys: Record<string, Journey> = {
     ],
     closing:
       "Song Quek brought his A-Game both to Training and when it came to the Crunch, hugely leveling up in terms of his mentality & pacing with TSA. He deserves huge credit for stepping up to the occasion - no less in his final IPPT as an NSF - and walks away with his name Marked in History, inscribed on a plaque indefinitely to serve as a Source of Inspiration to future generations! Well done Song Quek, and all the best in your post-ORD endeavours!",
+  },
+
+  // shun yuan's writeup
+  "s-y-chu": {
+    slug: "s-y-chu",
+    name: "Shun Yuan",
+    role: "NSman, 23",
+    photoUrl: shunYuanAsset.url,
+    photoAlt: "Shun Yuan leaning against a stone wall overseas",
+    quote:
+      "I went from doubting myself to running a sub-10 minute 2.4km with only 3 weeks of proper training. TSA knew exactly how to push me while keeping training realistic and effective. Couldn't have done this without their guidance.",
+    stats: [
+      { value: "9:54", label: "2.4km timing — Gold standard" },
+      { value: "89 / 100", label: "IPPT score" },
+      { value: "3.5 weeks", label: "Tailored Clutch Up program" },
+      { value: "0", label: "In-person sessions — fully remote" },
+    ],
+    sections: [
+      {
+        heading: "The Starting Line",
+        paragraphs: [
+          "Shun Yuan came to us in early December 2025 as a friend. Knowing our track record and background in speed development, he reached out for guidance to prepare for his upcoming IPPT on January 3, 2026.",
+          "Having taken a hiatus from structured training for almost the entire year, he was essentially starting from scratch with less than four weeks to prepare. We immediately enrolled him in a tailored, 3.5-week version of our proprietary Clutch Up program. With time working against us, every single session had to carry a clear, distinct purpose.",
+        ],
+      },
+      {
+        heading: "The Remote Build",
+        paragraphs: [
+          "Rather than relying purely on generic volume, we designed a multi-faceted routine: structured 2.4km race-pace work, foundational tempos, dynamic strides, and crucial 1500m-specific interval sessions. These 1500m sessions were designed to build speed reserves, making his target 2.4km race effort feel far more manageable by training him to comfortably sustain a pace faster than race pace.",
+          "About 1.5 weeks out from test day, we prescribed a full-effort 1500m time trial — a strategic session designed to fry his central nervous system, adapt his body to heavy lactic acid buildup, and give us a precise indicator for his race-day strategy.",
+        ],
+      },
+      {
+        heading: "Coached From Afar",
+        paragraphs: [
+          "What makes Shun Yuan's breakthrough particularly special is that we never attended a single session in person. Every workout was delivered remotely.",
+          "Shun Yuan took complete ownership of the program, trusting the process implicitly and executing every split, rest period, and pacing strategy down to the second.",
+        ],
+      },
+      {
+        heading: "Test Day",
+        paragraphs: [
+          "On January 3, 2026, the disciplined execution paid off in full. Shun Yuan didn't just regain his baseline — he vaulted straight back into his peak Personal Best shape, dropping a blistering 9:54 2.4km and securing an 89-point Gold award.",
+        ],
+        callout:
+          "I just focused on my own game... just zoomed past people like it was nothing. I'm pretty sure 11 mins would've been a struggle had TSA not come in to save me!",
+      },
+      {
+        heading: "Proof the System Travels",
+        paragraphs: [
+          "Shun Yuan's success is living proof that TSA's coaching system is as effective online as it is trackside. You don't need a coach standing over you with a stopwatch every day — so long as you fully commit to the system and trust the plan, the results will follow.",
+        ],
+      },
+    ],
+    closing:
+      "Sensational effort, Shun Yuan! We're thrilled to have helped you reclaim your Gold standard!",
   },
 };

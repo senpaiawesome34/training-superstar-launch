@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import marcPhoto from "@/assets/marc-menon.jpg.asset.json";
 import enzoPhoto from "@/assets/enzo-lim.jpg.asset.json";
 import songPhoto from "@/assets/songQuekAsset.jpeg";
+import shunYuanPhoto from "@/assets/shun-yuan.png.asset.json";
 
 const slugify = (name: string) =>
   name
@@ -58,6 +59,8 @@ const testimonials: Testimonial[] = [
     content:
       "I went from doubting myself to running a sub-10 minute 2.4km with only 3 weeks of proper training. TSA knew exactly how to push me while keeping training realistic and effective. Couldn't have done this without their guidance.",
     rating: 5,
+    photoUrl: shunYuanPhoto.url,
+    journey: "s-y-chu",
   },
   {
     name: "Jared Goh",
