@@ -129,7 +129,7 @@ const ReadMoreButton = ({ journey }: { journey: string }) => {
       variant="outline"
       size="sm"
       onClick={() => navigate(`/testimonials/${journey}`)}
-      className="mt-6 w-full border-primary/30 hover:bg-primary/10 hover:border-primary/50"
+      className="w-full lg:w-auto lg:shrink-0 border-primary/30 hover:bg-primary/10 hover:border-primary/50"
     >
       Read More
     </Button>
