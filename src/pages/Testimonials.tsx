@@ -7,6 +7,7 @@ import marcPhoto from "@/assets/marc-menon.jpg.asset.json";
 import enzoPhoto from "@/assets/enzo-lim.jpg.asset.json";
 import songPhoto from "@/assets/songQuekAsset.jpeg";
 import shunYuanPhoto from "@/assets/shun-yuan.png.asset.json";
+import jaredPhoto from "@/assets/jaredAsset.jpg";
 
 const slugify = (name: string) =>
   name
@@ -68,6 +69,8 @@ const testimonials: Testimonial[] = [
     content:
       "TSA has been instrumental in guiding me throughout my weight loss and fitness journey. After being largely sedentary for my 2 years in NS, working with TSA has kickstarted a much healthier and active lifestyle. I am now a confident runner with an athletic physique!",
     rating: 5,
+    photoUrl: jaredPhoto,
+    journey: "jared",
   },
   {
     name: "Evan Chan",

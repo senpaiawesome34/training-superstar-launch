@@ -17,6 +17,9 @@ import songResultAsset from "@/assets/songResultAsset.jpeg";
 import shunYuanAsset from "@/assets/shun-yuan.png.asset.json";
 import shunyuanResultAsset from "@/assets/shunyuanResultAsset.jpeg"
 
+// jared's photos
+import jaredAsset from "@/assets/jaredAsset.jpg"
+
 export type JourneySection = {
   heading?: string;
   paragraphs: string[];
@@ -278,4 +281,49 @@ export const journeys: Record<string, Journey> = {
     closing:
       "Sensational effort, Shun Yuan! We're thrilled to have helped you reclaim your Gold standard!",
   },
+
+  // jared's writeup
+  "jared": {
+    slug: "jared",
+    name: "Jared",
+    role: "Post-NS Athlete",
+    photoUrl: jaredAsset,
+    photoAlt: "jared",
+
+    // resultImage: jaredResultAsset,
+    stats: [
+      { label: "Focus", value: "Post-NS Rebuild" },
+      { label: "Goal", value: "Weight Loss & Engine" },
+      { label: "Method", value: "Aerobic Building Blocks" },
+      { label: "Result", value: "Lifestyle Overhaul" },
+    ],
+    quote: "TSA helped me break out of the post-NS slump with a sustainable routine. I lost weight, built a real aerobic engine, and completely overhauled my lifestyle.",
+    sections: [
+      {
+        heading: "Breaking the Post-NS Slump",
+        paragraphs: [
+        "When Jared first joined TSA, he was looking to break out of a cycle that affects so many post-NS servicemen: the inevitable physical slump after two years in a largely sedentary role. Having lost the structured activity of full-time service, he was ready to reset his habits, shed weight, and build an athletic, sustainable physique from the ground up."
+        ]
+      },
+      {
+        heading: "The Strategy: Low-Impact, Progressive Building Blocks",
+        paragraphs: [
+        "Rather than throwing him into high-impact, unsustainable beatdowns that risk burnout or injury, we took a structured, long-term approach tailored to his starting point. We designed a manageable weekly routine centered around moderate-to-low intensity training, ensuring he could build cardiovascular fitness without overwhelming his body."
+        ]
+      },
+      {
+        heading: "Habit-Stacking & Daily Momentum",
+        paragraphs: [
+          "The core objective was building consistency and establishing a daily habit of movement. By focusing on sustainable aerobic building blocks, progressive aerobic runs, and steady habit-stacking, Jared quickly transformed training from something he had to force into something that naturally anchored his day."
+        ]
+      },
+      {
+        heading: "The Transformation: From Weight Loss to Athletic Physique",
+        paragraphs: [
+        "As the weeks stacked up, the physical transformation followed naturally. What started as a goal to lose weight evolved into a complete lifestyle overhaul. Jared didn't just shed body fat—he built a strong aerobic engine, refined his running mechanics, and transformed into a capable, confident runner with the athletic physique to back it up.\n\nJared’s journey is proof that big physical breakthroughs don't always require extreme measures—they require the right system, progressive intensity, and unshakeable consistency.\n\nOutstanding work, Jared! We're proud to have been part of your shift toward a healthier, more active life!"
+        ]
+      }
+    ],
+    closing: "Outstanding work, Jared! We're proud to have been part of your shift toward a healthier, more active life!"
+  }
 };
