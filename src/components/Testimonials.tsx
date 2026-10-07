@@ -55,7 +55,7 @@ const Testimonials = () => {
         </div>
 
         {/* Testimonial Cards */}
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
             <div
               key={testimonial.name}
@@ -82,7 +82,7 @@ const Testimonials = () => {
               </p>
 
               {/* Author + Read More */}
-              <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-5">
+              <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
                 <div className="flex items-center gap-4">
                   {testimonial.photoUrl ? (
                     <img
@@ -129,7 +129,7 @@ const ReadMoreButton = ({ journey }: { journey: string }) => {
       variant="outline"
       size="sm"
       onClick={() => navigate(`/testimonials/${journey}`)}
-      className="w-full lg:w-auto lg:shrink-0 border-primary/30 hover:bg-primary/10 hover:border-primary/50"
+      className="w-full md:w-auto md:shrink-0 border-primary/30 hover:bg-primary/10 hover:border-primary/50"
     >
       Read More
     </Button>
