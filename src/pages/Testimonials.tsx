@@ -163,7 +163,7 @@ const TestimonialsPage = () => {
                   <Button
                     variant="outline"
                     className="mt-6 w-full border-primary/30 hover:bg-primary/10 hover:border-primary/50"
-                    onClick={() => navigate(`/testimonials/${slugify(testimonial.name)}`)}
+                    onClick={() => navigate(`/testimonials/${testimonial.journey}`)}
                   >
                     Read More
                   </Button>
