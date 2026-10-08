@@ -195,7 +195,7 @@ export const journeys: Record<string, Journey> = {
       {
         heading: "Improvising on the Fly",
         paragraphs: [
-          "Nonetheless, Song Quek diligently followed the advice of his coach, even executing runs on his own in the mornings when he couldn’t be physically present at training himself. A memorable session we conducted at Yio Chu Kang stadium threw an unexpected hurdle during the workout; where lanes 1-3 were blocked off due to another running club having priority access to the facility. On the fly, we improvised the workout, extrapolating the now 430 metres per lap track from lane 4 and emphasising the objective of even splitting and rhythm in order to achieve the desired lap split. Conducting an all in one crash course of sorts; we touched on numerous key aspects to achieving his goal time during the training session; all of which Song Quek soaked in thoroughly, while smashing a fantastically executed workout. Working on his pacing, cadence and sharpening his finishing speed; Song Quek ended the week in Tip Top shape, right in time for his IPPT.",
+          "Nonetheless, Song Quek diligently followed the advice of his coach, even executing runs on his own in the mornings when he couldn’t be physically present at training himself. A memorable session we conducted at Yio Chu Kang stadium threw an unexpected hurdle during the workout; where lanes 1-3 were blocked off due to another running club having priority access to the facility. On the fly, we improvised the workout, extrapolating the now 430 metres per lap track from lane 4 and adapting the objectives of the workout in order to achieve the desired effect. Conducting an all in one crash course of sorts; we touched on numerous key aspects to achieving his goal time during the training session. Song Quek soaked all of this in thoroughly, and smashed a fantastically executed workout; naturally, he ended the week in Tip Top shape, right on time for his IPPT.",
         ],
         // imageUrl: songTrainingAsset,
         // imageAlt: "Song Quek during interval training",
@@ -249,8 +249,8 @@ export const journeys: Record<string, Journey> = {
       {
         heading: "The Remote Build",
         paragraphs: [
-          "Rather than relying purely on generic volume, we designed a multi-faceted routine: structured 2.4km race-pace work, foundational tempos, dynamic strides, and crucial 1500m-specific interval sessions. These 1500m sessions were designed to build speed reserves, making his target 2.4km race effort feel far more manageable by training him to comfortably sustain a pace faster than race pace.",
-          "About 1.5 weeks out from test day, we prescribed a full-effort 1500m time trial — a strategic session designed to fry his central nervous system, adapt his body to heavy lactic acid buildup, and give us a precise indicator for his race-day strategy.",
+          "Rather than relying purely on generic volume, we designed a multi-faceted routine designed to build speed and strength, making his target 2.4km race effort feel far more manageable by training him to comfortably sustain an effort faster than race pace.",
+          "We adapted his body to the demands of the trial, and obtained a precise strategy for his race-day execution.",
         ],
       },
       {
