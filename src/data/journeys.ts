@@ -293,7 +293,7 @@ export const journeys: Record<string, Journey> = {
     // resultImage: jaredResultAsset,
     stats: [
       { label: "Focus", value: "Post-NS Rebuild" },
-      { label: "Goal", value: "Weight Loss & Engine" },
+      { label: "Goal", value: "Weight Loss & Fitness" },
       { label: "Method", value: "Aerobic Building Blocks" },
       { label: "Result", value: "Lifestyle Overhaul" },
     ],
