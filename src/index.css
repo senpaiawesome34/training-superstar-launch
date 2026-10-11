@@ -27,6 +27,11 @@
 
     --brand-green: 143 82% 25%;
     --brand-gold: 45 88% 56%;
+    --brand-navy: 234 97% 23%;
+
+    /* Partner logo surfaces */
+    --logo-light: 0 0% 100%;
+    --logo-dark: 0 0% 0%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;

@@ -104,7 +104,7 @@ const Programs = () => {
               {/* CTA */}
               {program.link ? (
                 <Button
-                  variant={program.popular ? "hero" : "heroOutline"}
+                  variant="hero"
                   className="w-full"
                   asChild
                 >
