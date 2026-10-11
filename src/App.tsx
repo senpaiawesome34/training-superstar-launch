@@ -2,13 +2,12 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import Index from "./pages/Index";
 import PaymentSuccess from "./pages/PaymentSuccess";
 import IPPTPrep from "./pages/IPPTPrep";
 import SpeedFundamentals from "./pages/SpeedFundamentals";
-import EightWeeksToPeak from "./pages/EightWeeksToPeak";
 import ClutchUp from "./pages/ClutchUp";
 import TestimonialsPage from "./pages/Testimonials";
 import TestimonialJourney from "./pages/TestimonialJourney";
@@ -36,7 +35,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/ippt-prep" element={<IPPTPrep />} />
           <Route path="/speed-fundamentals" element={<SpeedFundamentals />} />
-          <Route path="/8-weeks-to-peak" element={<EightWeeksToPeak />} />
+          <Route path="/8-weeks-to-peak" element={<Navigate to="/clutch-up" replace />} />
           <Route path="/clutch-up" element={<ClutchUp />} />
           <Route path="/testimonials" element={<TestimonialsPage />} />
           <Route path="/testimonials/:slug" element={<TestimonialJourney />} />
