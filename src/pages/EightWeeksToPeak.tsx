@@ -17,8 +17,8 @@ const phases = [
   },
   {
     title: "Phase 3: Clutch Up (Weeks 6-7)",
-    description: "The peak phase. Race-pace intervals and marathon-pace simulations sharpen your legs to deliver exactly when it counts.",
-    highlights: ["Race-pace intervals", "Marathon-pace simulations", "Mental conditioning"],
+    description: "The peak phase. Race-pace simulations sharpen your legs to deliver exactly when it counts.",
+    highlights: ["Race-pace intervals", "Race-day tactical simulations", "Mental conditioning"],
   },
   {
     title: "Phase 4: Taper & Race Ready (Week 8)",
@@ -62,7 +62,7 @@ const EightWeeksToPeak = () => {
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-6">
               <CalendarDays className="w-4 h-4 text-primary" />
-              <span className="text-sm font-medium text-primary">Seasonal Program — October–November Only</span>
+              <span className="text-sm font-medium text-primary">Seasonal Program</span>
             </div>
 
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-display font-bold leading-tight mb-6">
@@ -70,7 +70,7 @@ const EightWeeksToPeak = () => {
             </h1>
 
             <p className="text-lg text-muted-foreground max-w-xl mb-8">
-              Our special Clutch Up Program. 8 weeks or less of targeted race build-up that takes committed runners from fit to peaked — sharp, confident, and ready to race.
+              Our special in-house Clutch Up Program. 8 weeks or less of targeted race build-up that takes committed runners from fit to peaked — sharp, confident, and ready to race.
             </p>
 
             <div className="flex flex-wrap gap-6 mb-8">
