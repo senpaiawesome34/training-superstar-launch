@@ -30,13 +30,13 @@ const programs = [
     popular: false,
   },
   {
-    title: "8 Weeks to Peak",
-    description: "Special BYD Singapore International Marathon Clutch Up Program. Available every October–November only.",
-    duration: "8 weeks",
+    title: "Clutch Up",
+    description: "Training Superstar Academy's Proprietary in-house Clutch Up Program. For those in need of a last-minute push.",
+    duration: "Up to 8 Weeks, duration flexible, Context-Specific",
     icon: CalendarDays,
-    features: ["Marathon-specific build", "Race-day pacing", "Peak-week tapering", "Seasonal intake"],
+    features: ["Race-specific build", "Race-day pacing", "Peak-week tapering", "Seasonal intake"],
     popular: false,
-    link: "/8-weeks-to-peak",
+    link: "/clutch-up",
   },
 ];
 
@@ -119,7 +119,7 @@ const Programs = () => {
                   className="w-full"
                   disabled
                 >
-                  {program.title === "8 Weeks to Peak" ? "Seasonal Program" : "Coming Soon"}
+                  {program.title === "Clutch Up" ? "Seasonal Program" : "Coming Soon"}
                 </Button>
               )}
             </div>
