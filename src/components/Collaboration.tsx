@@ -52,7 +52,7 @@ const Collaboration = () => {
               className={`${partner.surface} h-24 sm:h-28 rounded-xl border border-border overflow-hidden flex items-center justify-center p-4 transition-all duration-500 hover:border-primary/50`}
             >
               {partner.mark ? (
-                <div className="flex h-full w-full min-h-0 flex-col items-center justify-center">
+                <div className="flex h-full w-full min-h-0 flex-col items-center justify-center gap-1">
                   <img
                     src={partner.mark}
                     alt=""
