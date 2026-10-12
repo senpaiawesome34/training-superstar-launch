@@ -9,6 +9,7 @@ type Partner = {
   logo: string;
   mark?: string;
   surface: string;
+  url: string;
 };
 
 const partners: Partner[] = [
@@ -16,22 +17,26 @@ const partners: Partner[] = [
     name: "Movement Mechanics Physiotherapy",
     logo: movementMechanicsAsset.url,
     surface: "bg-logo-light",
+    url: "https://www.mmphysio.com.sg/",
   },
   {
     name: "Alternative X",
     logo: alternativeXAsset.url,
     surface: "bg-logo-dark",
+    url: "https://www.instagram.com/alternativex_sg/",
   },
   {
     name: "Team Fabian",
     logo: teamFabianAsset.url,
     mark: tfAsset.url,
     surface: "bg-logo-light",
+    url: "https://www.instagram.com/teamfabiansg/",
   },
   {
     name: "FWCC — Creating Champions",
     logo: fwccAsset.url,
     surface: "bg-brand-navy",
+    url: "https://www.fwcc.co/",
   },
 ];
 
@@ -47,8 +52,13 @@ const Collaboration = () => {
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto">
           {partners.map((partner) => (
-            <div
+            <a
               key={partner.name}
+              href={partner.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              title={partner.name}
+              aria-label={`${partner.name} — opens in a new tab`}
               className={`${partner.surface} h-24 sm:h-28 rounded-xl border border-border overflow-hidden flex items-center justify-center p-4 transition-all duration-500 hover:border-primary/50`}
             >
               {partner.mark ? (
@@ -71,7 +81,7 @@ const Collaboration = () => {
                   className="max-h-full max-w-full object-contain"
                 />
               )}
-            </div>
+            </a>
           ))}
         </div>
       </div>
