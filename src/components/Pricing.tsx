@@ -168,7 +168,7 @@ const Pricing = () => {
 
               {/* CTA */}
               <Button
-                variant={tier.popular ? "hero" : "heroOutline"}
+                variant="hero"
                 className="w-full"
                 onClick={() => handleSubscribe(tier.tierKey)}
                 disabled={loadingTier !== null}
