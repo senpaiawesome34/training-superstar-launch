@@ -129,9 +129,9 @@ const Pricing = () => {
           {tiers.map((tier) => (
             <div
               key={tier.name}
-              className={`relative group bg-gradient-card rounded-2xl p-8 border transition-all duration-500 hover:shadow-glow ${
+              className={`relative group bg-gradient-card rounded-2xl p-8 border transition-all duration-500 hover:shadow-glow flex flex-col ${
                 tier.popular
-                  ? "border-primary md:-translate-y-4 shadow-glow"
+                  ? "border-primary shadow-glow"
                   : "border-border hover:border-primary/50"
               }`}
             >
