@@ -56,12 +56,12 @@ const Collaboration = () => {
                   <img
                     src={partner.mark}
                     alt=""
-                    className="h-5 sm:h-6 w-auto flex-shrink-0 object-contain"
+                    className="h-6 sm:h-7 w-auto flex-shrink-0 object-contain"
                   />
                   <img
                     src={partner.logo}
                     alt={partner.name}
-                    className="min-h-0 w-full flex-1 object-contain"
+                    className="min-h-0 w-[94%] flex-1 object-contain"
                   />
                 </div>
               ) : (
