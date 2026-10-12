@@ -1,9 +1,17 @@
 import movementMechanicsAsset from "@/assets/partner-movement-mechanics.jpg.asset.json";
 import alternativeXAsset from "@/assets/partner-alternative-x.jpg.asset.json";
 import tfAsset from "@/assets/partner-tf.jpg.asset.json";
+import teamFabianAsset from "@/assets/partner-team-fabian.png.asset.json";
 import fwccAsset from "@/assets/partner-fwcc.jpg.asset.json";
 
-const partners = [
+type Partner = {
+  name: string;
+  logo: string;
+  mark?: string;
+  surface: string;
+};
+
+const partners: Partner[] = [
   {
     name: "Movement Mechanics Physiotherapy",
     logo: movementMechanicsAsset.url,
@@ -15,8 +23,9 @@ const partners = [
     surface: "bg-logo-dark",
   },
   {
-    name: "TF",
-    logo: tfAsset.url,
+    name: "Team Fabian",
+    logo: teamFabianAsset.url,
+    mark: tfAsset.url,
     surface: "bg-logo-light",
   },
   {
@@ -42,11 +51,26 @@ const Collaboration = () => {
               key={partner.name}
               className={`${partner.surface} h-24 sm:h-28 rounded-xl border border-border overflow-hidden flex items-center justify-center p-4 transition-all duration-500 hover:border-primary/50`}
             >
-              <img
-                src={partner.logo}
-                alt={partner.name}
-                className="max-h-full max-w-full object-contain"
-              />
+              {partner.mark ? (
+                <div className="flex h-full w-full min-h-0 flex-col items-center justify-center gap-1.5">
+                  <img
+                    src={partner.mark}
+                    alt=""
+                    className="h-5 sm:h-6 w-auto flex-shrink-0 object-contain"
+                  />
+                  <img
+                    src={partner.logo}
+                    alt={partner.name}
+                    className="min-h-0 w-full flex-1 object-contain"
+                  />
+                </div>
+              ) : (
+                <img
+                  src={partner.logo}
+                  alt={partner.name}
+                  className="max-h-full max-w-full object-contain"
+                />
+              )}
             </div>
           ))}
         </div>
