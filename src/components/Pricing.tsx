@@ -169,7 +169,7 @@ const Pricing = () => {
               {/* CTA */}
               <Button
                 variant="hero"
-                className="w-full"
+                className="mt-auto w-full"
                 onClick={() => handleSubscribe(tier.tierKey)}
                 disabled={loadingTier !== null}
               >
